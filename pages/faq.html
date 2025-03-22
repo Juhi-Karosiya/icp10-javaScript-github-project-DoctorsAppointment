@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital FAQ</title>
+    <style>
+        body {
+          
+            margin: 0%;
+           padding: 0%;
+        }
+        .container1{
+            max-width: 800px;
+            width: 50%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0,0.1);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .faq {
+            margin-bottom: 20px;
+        }
+        .faq h3 {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .style1{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .style2{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .style3{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .style4{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .style5{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .style6{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .style7{
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .main{
+            display: flex;
+            padding: 20px;
+           
+            
+            
+         width: 100%;
+           height: 600px;
+        }
+        .container2{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            padding-top: 5%;
+            padding-left: 10%;
+           
+        }
+        .imgfaq{
+            border-radius: 50px;
+            width: 90%;
+            
+        
+        }
+        @media  (max-width:768px) {
+
+            .main{
+                display: block;
+                
+               
+            }
+            .container2{
+                flex-wrap: wrap-reverse;
+justify-content: center;
+align-items: center;
+margin:0px auto;
+            }
+            .container1{
+                margin:0px auto;
+                padding: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+   
+    <div class="container1">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq">
+            <h3 onclick="FAQ1()" ondblclick="close(name)" >What are the hospital's visiting hours?</h3>
+            <p id="head1" class="style1"> => Visiting hours are from 10:00 AM to 8:00 PM daily.</p>
+        </div>
+        
+        <div class="faq">
+            <h3 onclick="FAQ2()">How can I book an appointment?</h3>
+            <p id="head2" class="style2"> =>You can book an appointment through our website or by calling our reception at +91-1234567890.</p>
+        </div>
+        
+        <div class="faq">
+            <h3 onclick="FAQ3()" > Does the hospital accept insurance?</h3>
+            <p  id="head3" class="style3"> => Yes, we accept most major insurance providers. Please contact our billing department for details.</p>
+        </div>
+
+
+        <div class="faq">
+            <h3 onclick="FAQ4()" > Can family members stay overnight with a patient?</h3>
+            <p  id="head4" class="style4"> =>Yes, one attendant is allowed to stay overnight with a patient, subject to hospital policies.</p>
+        </div>
+        <div class="faq">
+            <h3 onclick="FAQ5()" > What payment methods are accepted?</h3>
+            <p  id="head5" class="style5"> => We accept cash, credit/debit cards, UPI, and online bank transfers</p>
+        </div>
+        <div class="faq">
+            <h3 onclick="FAQ6()" > How can I book an appointment?</h3>
+            <p  id="head6" class="style6"> => You can book an appointment through our website, mobile app, or by calling our reception at +91-1234567890
+            </p>
+        </div>
+        <div class="faq">
+            <h3 onclick="FAQ7()" > Does the hospital have parking facilities?</h3>
+            <p  id="head7" class="style7"> =>  Yes, we have ample parking space for patients and visitors, including designated parking for differently-abled individuals.</p>
+        </div>
+     
+</div>
+<div class="container2">
+    <img id="img" src="./../images/faq.png" class="imgfaq" onmouseenter="Change()" onmouseout="unchanged()"> 
+
+</div>
+
+
+</div>
+    <script>
+       
+        function unchanged(){
+           
+             const image=document.getElementById("img");
+    image.src = "./../images/faq.png"
+
+        }
+        setTimeout(unchanged,2000)
+        
+function Change(){
+    const image=document.getElementById("img");
+    image.src = "./../images/faq1.png"
+
+}
+
+
+
+
+        // function close(){
+        //     const heading=document.getElementById("head1");
+        //     heading.classList.add(`style1`)
+        // }
+    
+
+        function FAQ1(){
+       const heading=document.getElementById("head1");
+
+       if(heading.className="style1"){
+       heading.classList.remove(`style1`)
+    }
+      
+      else{
+       heading.classList.add(`style1`)
+    }
+  
+        }
+;
+
+        function FAQ2(){
+     const heading=document.getElementById("head2")
+     heading.classList.remove(`style2`)
+
+        }
+
+        function FAQ3(){
+       const heading=document.getElementById("head3")
+       heading.classList.remove(`style3`)
+
+        }
+
+        function FAQ4(){
+       const heading=document.getElementById("head4")
+       heading.classList.remove(`style4`)
+
+        }
+        function FAQ5(){
+       const heading=document.getElementById("head5")
+       heading.classList.remove(`style5`)
+
+        }
+        function FAQ6(){
+       const heading=document.getElementById("head6")
+       heading.classList.remove(`style6`)
+
+        }
+        function FAQ7(){
+       const heading=document.getElementById("head7")
+       heading.classList.remove(`style7`)
+
+        }
+      
+    </script>
+</body>
+</html>
