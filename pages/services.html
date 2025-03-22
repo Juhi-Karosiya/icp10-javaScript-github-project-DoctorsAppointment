@@ -3,13 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Doctor's Appointment - Services</title>
+    <link rel="stylesheet" href="../css/services.css">
+
 </head>
 <body>
- <h1> Services</h1>
- <h2>.....</h2>
- <h6>Hello Friend</h6>
- <p>...</p>
+
+<header>
+    <div class="navbar">
+        <h1>Doctor's Appointment</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div id="services-list" class="services-container"></div>
+    </section>
+</main>
+
+<!-- Service Detail Modal -->
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="service-modal">
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <p id="modal-price"></p>
+    <button class="close-btn" onclick="closeModal()">Close</button>
+</div>
+
+<footer>
+    <p>&copy; 2025 Doctor's Appointment. All rights reserved.</p>
+</footer>
+
+<script>
+    // Service Data
+    const services = [
+        {
+            name: "General Checkup",
+            price: "$50",
+            description: "Comprehensive health check for overall well-being."
+        },
+        {
+            name: "Pediatrics",
+            price: "$70",
+            description: "Child healthcare services, vaccinations, and consultations."
+        },
+        {
+            name: "Dermatology",
+            price: "$60",
+            description: "Treatment for skin issues, acne, and rashes."
+        },
+        {
+            name: "Cardiology",
+            price: "$120",
+            description: "Heart and vascular care with expert cardiologists."
+        }
+    ];
+
+    // DOM Elements
+    const servicesContainer = document.getElementById('services-list');
+    const modal = document.getElementById('service-modal');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalPrice = document.getElementById('modal-price');
+
+    // Display Services
+    function displayServices() {
+        servicesContainer.innerHTML = '';
+        services.forEach((service, index) => {
+            const card = document.createElement('div');
+            card.classList.add('service-card');
+            card.setAttribute('data-index', index);
+            card.innerHTML = `
+                <h3>${service.name}</h3>
+                <p>${service.description}</p>
+                <strong>${service.price}</strong>
+            `;
+            card.addEventListener('click', () => showModal(index));
+            servicesContainer.appendChild(card);
+        });
+    }
+
+    // Show Modal
+    function showModal(index) {
+        const service = services[index];
+        modalTitle.textContent = service.name;
+        modalDescription.textContent = service.description;
+        modalPrice.textContent = `Price: ${service.price}`;
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+
+    // Close Modal
+    function closeModal() {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+
+    window.addEventListener('DOMContentLoaded', displayServices);
+</script>
+
 </body>
 </html>
-
