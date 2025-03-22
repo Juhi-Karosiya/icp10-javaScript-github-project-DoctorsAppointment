@@ -4,30 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Home Page</title>
   </head>
   <body>
     <nav class="navbar-container">
-      <img src="./icons/logo.png" class="logo" />
-      <p class="heading">MediCare Hub</p>
+      <div class="main-section">
+        <img src="./icons/logo.png" class="logo" />
+        <p class="title">MediCare Hub</p>
+      </div>
 
       <div class="heading-container">
-        <a href="index.html">Home</a>
-        <a href="">Order Medicine</a>
-        <a href="./pages/services.html">Service</a>
-        <a href="./pages/about_us.html">About Us</a>
-        <a href="">Contact Us</a>
-
-        <label>More</label>
-        <select>
-            <option value="Feedback">Feedback</option>
-            <option value="Blog & News">Blog & News</option>
-            <option value="Career">Career</option>
-            <option value="FAQ's">FAQ's</option>
-        </select>
-
-    
+        <a href="index.html" class="heading">Home</a>
+        <a href="#" class="heading">Order Medicine</a>
+        <a href="./pages/services.html" class="heading">Service</a>
+        <a href="./pages/about_us.html" class="heading">About Us</a>
+        <a href="#" class="heading">Contact Us</a>
+        <a href="#" class="heading">More</a>
+        <a href="#" class="heading log-sign-heading">Log in / Sign in</a>
+        </div>
       </div>
     </nav>
+
+    <div class="card-container">
+      <img src="./images/home-background.jpg" class="card-background-img"/>
+      <h1 class="card-heading">OUR DISCOVERY. ROAD TO RECOVERY.</h1>
+      <p class="card-description">Life threatened globally by rising multidrug-resistant<br>
+        infections or Antimicrobial Resistance (AMR).<br><br>
+        
+        ZaynichTM administered on compassionate <br>ground and
+        saved 45 lives. Now in <br>Global phase III clinical trial.</p>
+      <a href="blog.news">
+        <button type="button" class="card-btn">Know More</button>
+      </a>
+    </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
