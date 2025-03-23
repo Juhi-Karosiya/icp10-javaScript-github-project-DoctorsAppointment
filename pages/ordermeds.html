@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> medicine </title>
-    <style> #search-container { 
+    <style>
+         body {
+            background-color: rgb(225, 225, 250);
+         font-family: Arial, sans-serif;
+         padding: 20px;
+          text-align: center;
+           }
+           #heds{ 
+            color:darkgreen;
+           }
+     #search-container { 
         display: flex;
          justify-content: center; 
          align-items: center;
@@ -18,15 +28,17 @@
              border: none; 
              padding: 5px; 
              }
+             
              </style>
 </head>
 <body>
     
     <h1> MEDICINES </h1>
-    <h1>Order Medicine Online</h1>
+    <h1 id="heds" >Order Medicine Online </h1>
     <div id="search-container">
         <input type="text" id="search-box" placeholder="Search medicine..." onkeyup="searchMedicine()">
         <button id="clear-search" onclick="clearSearch()">Clear</button>
     </div>
+    <h2>Total Items in Cart: <span id="total-items" onclick="showThankYou()">0 ✅</span></h2>
 </body>
 </html>
