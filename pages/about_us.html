@@ -138,6 +138,35 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
+        .text-box {
+            margin: 20px;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(2, 138, 138);
+            box-shadow: 0px 2px 2px 0px rgb(0, 28, 28);
+
+        }
+
+        .text-box:focus {
+            outline: none;
+        }
+
+        .btn {
+            margin: 20px;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(2, 138, 138);
+            box-shadow: 0px 2px 2px 0px rgb(0, 28, 28);
+        }
+
+        .city-info {
+            font-size: 30px;
+            font-family: ' Courier';
+            padding: 70px;
+        }
+
         /* Responsive Design */
 
         @media (max-width: 768px) {
@@ -187,7 +216,8 @@
                 <button id="more-info-btn">Read More</button>
             </div>
         </div>
-    </section>
+
+</section>
 
     <div class="container">
         <div class="card-grid">
@@ -245,6 +275,11 @@
                 <img src="../images/doctor_boys.png" alt="Card 2">
                 <h3>Gaurav</h3>
             </div>
+
+            <div class="card">
+                <img src="../images/doctor_boys.png" alt="Card 2">
+                <h3>Vedant</h3>
+            </div>
         </div>
     </div>
 
@@ -253,7 +288,6 @@
         document.getElementById('more-info-btn').addEventListener('click', function () {
             alert('A doctor, or physician, is a skilled healthcare professional who diagnoses, treats, and prevents diseases and injuries, offering medical advice and care to patients. They require extensive education and training, often specializing in specific areas of medicine. ');
         });
-
     </script>
 </body>
 </html>
