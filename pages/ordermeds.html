@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> medicine </title>
+    <style> #search-container { 
+        display: flex;
+         justify-content: center; 
+         align-items: center;
+          margin-bottom: 20px;
+           }
+           #clear-search {
+         margin-left: 10px;
+          cursor: pointer;
+           background: red;
+            color: white;
+             border: none; 
+             padding: 5px; 
+             }
+             </style>
 </head>
 <body>
-    <h1> Most trusted online pharmacy </h1>
-    <h2> MEDICINES </h2>
+    
+    <h1> MEDICINES </h1>
+    <h1>Order Medicine Online</h1>
+    <div id="search-container">
+        <input type="text" id="search-box" placeholder="Search medicine..." onkeyup="searchMedicine()">
+        <button id="clear-search" onclick="clearSearch()">Clear</button>
+    </div>
 </body>
 </html>
