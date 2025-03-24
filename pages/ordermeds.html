@@ -28,6 +28,20 @@
              border: none; 
              padding: 5px; 
              }
+        .medicine-card { 
+        border: 1px solid #ddd; 
+        padding: 10px;
+         margin: 10px;
+          display: inline-block;
+           position: relative;
+            }
+            .medicine-logo {
+                 position: absolute; 
+                top: 5px; 
+                right: 5px; 
+                width: 30px; 
+                height: 30px;
+             }
              
              </style>
 </head>
@@ -64,6 +78,30 @@
             "Prednisone": "images/prednisone.jpg",
             "Clarithromycin": "images/clarithromycin.jpg"
         };
+        let cart = {};
+        
+        function renderMedicines(filter = "") {
+            const list = document.getElementById("medicine-list");
+            list.innerHTML = "";
+            medicines.filter(med => med.toLowerCase().includes(filter.toLowerCase())).forEach(med => {
+                let highlightedMed = med.replace(new RegExp(filter, "gi"), match => `<mark>${match}</mark>`);
+                cart[med] = cart[med] || 0;
+                list.innerHTML += `
+            <div class='medicine-card'>
+                        <img src='medicine-logo.png' alt='logo' class='medicine-logo'>
+                        <h3>${highlightedMed}</h3>
+                        <div class='cart-controls'>
+                            <button onclick="decrement('${med}')">-</button>
+                            <span id='count-${med}'>${cart[med]}</span>
+                            <button onclick="increment('${med}')">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+            updateTotal();
+            updateCartSummary();
+        }
+
     </script>
 </body>
 </html>
