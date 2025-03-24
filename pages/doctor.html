@@ -6,148 +6,277 @@
     <title>Doctor Search</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #0C1E5B;
-    text-align: center;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background-color: #808db9;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
 
-.search-container {
-    margin-top: 30px;
-}
+        .search-container {
+            margin-top: 30px;
+        }
 
-.search-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
+        .search-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-input {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-}
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
 
-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-button:hover {
-    background-color: #0056b3;
-}
+        button:hover {
+            background-color: #0056b3;
+        }
 
-.doctor-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
+        .doctor-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-.doctor-card {
-    background: white;
-    color: black;
-    width: 300px;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+        .doctor-card {
+            display: flex;
+            align-items: center;
+            background: white;
+            color: black;
+            width: 500px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.doctor-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50% ;
-}
+        .doctor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
 
-.doctor-card h3 {
-    margin: 10px 0 5px;
-}
+        .doctor-info {
+            flex-grow: 1; 
+        }
 
-.doctor-card p {
-    margin: 5px 0;
-}
+        .doctor-card h3 {
+            margin: 5px 0;
+        }
 
-.book-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .doctor-card p {
+            margin: 3px 0;
+        }
 
-.book-btn:hover {
-    background-color: #218838;
-}
+        .book-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
     <div class="search-container">
         <h2>Find and Book a Doctor</h2>
         <div class="search-box">
-            <input type="text" id="location" placeholder="🔍 Search location">
-            <input type="text" id="searchQuery" placeholder="🔍 Search doctors, clinics">
-            <button onclick="searchDoctors()">Search</button>
+            <input type="text" id="searchCity" placeholder="🔍 Search by City">
+            <button onclick="searchByCity()">Search By City</button>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchSpecialty" placeholder="🔍 Search Doctors,Clinics,Hospitals,etc">
+            <button onclick="searchBySpecialty()">Search by Type</button>
         </div>
     </div>
 
     <div id="doctor-list" class="doctor-list"></div>
 
     <script>
-const doctors = [
-    {
-        name: "Dr. Amol Thorat Dinkar",
-        specialty: "Dentist",
-        experience: "25 years",
-        location: "Kharadi, Pune",
-        fee: "₹300",
-        rating: "90%",
-        image: "https://www.dentistfriend.com/uploads/photo/dr-amol-thorat-dinkar-1476079146-57fb2e2a986fd.jpg"
-    },
-    {
-        name: "Krushna Orthodontic and Dental Clinic",
-        specialty: "Dentist",
-        experience: "1 - 12 years",
-        location: "Sinhagad Road",
-        fee: "₹300",
-        rating: "100%",
-        image: "https://images1-fabric.practo.com/practices/1238826/krushna-orthodontic-and-dental-clinic-pune-66e5666d94f06.jpeg"
-    }
-];
+        const doctors = [
+            {
+                name: "Dr. Amol Thorat Dinkar",
+                specialty: "Dentist",
+                experience: "25 years",
+                location: "Kharadi, Pune",
+                fee: "₹300",
+                rating: "90%",
+                image: "https://www.dentistfriend.com/uploads/photo/dr-amol-thorat-dinkar-1476079146-57fb2e2a986fd.jpg"
+            },
+            {
+                name: "Krushna Orthodontic and Dental Clinic",
+                specialty: "Dentist",
+                experience: "1 - 12 years",
+                location: "Sinhagad Road",
+                fee: "₹300",
+                rating: "100%",
+                image: "https://images1-fabric.practo.com/practices/1238826/krushna-orthodontic-and-dental-clinic-pune-66e5666d94f06.jpeg"
+            },
+            {
+                name: "Dr. Sandeep Bhirud",
+                specialty: "Dentist",
+                experience: "15 years",
+                location: "Wakad, Pune",
+                fee: "₹400",
+                rating: "85%",
+                image: "https://via.placeholder.com/100"
+            },
+            {
+                name: "Dr. Hina Kherajani",
+                specialty: "Dermatologist",
+                experience: "23 years",
+                location: "Pimple Saudagar, Pune",
+                fee: "₹700",
+                rating: "95%",
+                image: "https://via.placeholder.com/100"
+            },
+            {
+                name: "Dr. Vaseem Choudhary",
+                specialty: "Dentist",
+                experience: "25 years",
+                location: "Sadashiv Peth, Pune",
+                fee: "₹500",
+                rating: "95%",
+                image: "https://via.placeholder.com/100"
+            },
+            {
+                name: "Dr. Vidya Gaikwad",
+                specialty: "Obstetrician,Gynecologist",
+                experience: "15 years",
+                location: "Sadashiv Peth, Pune",
+                fee: "₹500",
+                rating: "91%",
+                image: ""
+            },
+            {
+                name: "Dr. Sabrina Bokil",
+                specialty: "Obstetrician/Gynecologist",
+                experience: "34 years",
+                location: "Baner, Pune",
+                fee: "₹700",
+                rating: "86%",
+                image: ""
+            },
+            {
+                name: "Dr. Rajesh Nalawade",
+                specialty: "Homeopath",
+                experience: "21 years",
+                location: "Nigdi-Pradhkaran, Pune",
+                fee: "₹1000",
+                rating: "95%",
+                image: "" 
+            },
+            {
+                name: "Dr. Hemant Chavan",
+                specialty: "Ayurveda",
+                experience: "15 years",
+                location: "Pimple Saudagar, Pune",
+                fee: "₹200",
+                rating: "94%",
+                image: ""
+            },
+            {
+                name: "Dr. Punam More",
+                specialty: "Ayurveda",
+                experience: "15 years",
+                location: "Sadashiv Peth, Pune",
+                fee: "₹500",
+                rating: "95%",
+                image: "" 
+            },
+            {
+                name: "Dr. Shailaja Desai",
+                specialty: "General Physician",
+                experience: "16 years",
+                location: "Sadashiv Peth, Pune",
+                fee: "₹700",
+                rating: "90%",
+                image: ""  
+            },
+            
+            
+        ];
 
-function searchDoctors() {
-    const searchQuery = document.getElementById("searchQuery").value.toLowerCase();
-    const doctorListDiv = document.getElementById("doctor-list");
-    doctorListDiv.innerHTML = "";
+        function displayDoctors(doctorList) {
+            const doctorListDiv = document.getElementById("doctor-list");
+            doctorListDiv.innerHTML = ""; 
 
-    doctors.forEach(doctor => {
-        if (doctor.name.toLowerCase().includes(searchQuery) || doctor.specialty.toLowerCase().includes(searchQuery)) {
-            const doctorCard = `<div class="doctor-card">
-                <img src="${doctor.image}" alt="${doctor.name}">
-                <h3>${doctor.name}</h3>
-                <p><strong>Specialty:</strong> ${doctor.specialty}</p>
-                <p><strong>Experience:</strong> ${doctor.experience}</p>
-                <p><strong>Location:</strong> ${doctor.location}</p>
-                <p><strong>Fee:</strong> ${doctor.fee}</p>
-                <p><strong>Rating:</strong> ${doctor.rating}</p>
-                <button class="book-btn">Book Appointment</button>
-            </div>`;
-            doctorListDiv.innerHTML += doctorCard;
+            if (doctorList.length === 0) {
+                doctorListDiv.innerHTML = "<p>No doctors found.</p>";
+                return;
+            }
+
+            for (let i = 0; i < doctorList.length; i++) {
+                let doctor = doctorList[i];
+
+                const doctorCard = `
+                    <div class="doctor-card">
+                        <img src="${doctor.image}" alt="${doctor.name}">
+                        <div class="doctor-info">
+                            <h3>${doctor.name}</h3>
+                            <p><strong>Specialty:</strong> ${doctor.specialty}</p>
+                            <p><strong>Experience:</strong> ${doctor.experience}</p>
+                            <p><strong>Location:</strong> ${doctor.location}</p>
+                            <p><strong>Fee:</strong> ${doctor.fee}</p>
+                            <p><strong>Rating:</strong> ${doctor.rating}</p>
+                            <button class="book-btn">Book Appointment</button>
+                        </div>
+                    </div>`;
+                doctorListDiv.innerHTML += doctorCard;
+            }
         }
-    });
-}
+
+        function searchByCity() {
+            const city = document.getElementById("searchCity").value.toLowerCase();
+            let results = [];
+
+            for (let i = 0; i < doctors.length; i++) {
+                if (doctors[i].location.toLowerCase().includes(city)) {
+                    results.push(doctors[i]);
+                }
+            }
+            
+            displayDoctors(results);
+        }
+
+        function searchBySpecialty() {
+            const specialty = document.getElementById("searchSpecialty").value.toLowerCase();
+            let results = [];
+
+            for (let i = 0; i < doctors.length; i++) {
+                if (doctors[i].specialty.toLowerCase().includes(specialty)) {
+                    results.push(doctors[i]);
+                }
+            }
+            
+            displayDoctors(results);
+        }
+
+       
+        displayDoctors(doctors);
     </script>
 </body>
 </html>
