@@ -134,6 +134,28 @@
             summary += "</ul>";
             document.getElementById("cart-summary").innerHTML = hasItems ? summary : "<p>Your cart is empty</p>";
         }
+        function updateCartSummary() {
+            let summary = "<h3>Cart Summary</h3><ul>";
+            let hasItems = false;
+            for (let med in cart) {
+                if (cart[med] > 0) {
+                    summary += `<li>${med}: ${cart[med]}</li>`;
+                    hasItems = true;
+                }
+            }
+            summary += "</ul>";
+            document.getElementById("cart-summary").innerHTML = hasItems ? summary : "<p>Your cart is empty</p>";
+        }
+        
+        function searchMedicine() {
+            const query = document.getElementById("search-box").value;
+            renderMedicines(query);
+        }
+        
+        function clearSearch() {
+            document.getElementById("search-box").value = "";
+            renderMedicines();
+        }
         
 
     </script>
