@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <h2>Find and Book</h2>
+        <div class="search-box">
+            <input type="text" id="location" placeholder="🔍 Search location">
+            <input type="text" id="doctor-search" placeholder="🔍 Search doctors, clinics, hospitals, etc.">
+            <button onclick="searchDoctors()">Search</button>
+        </div>
+    </div>
+
+    <script>
+        function searchDoctors() {
+            let location = document.getElementById("location").value;
+            let doctorSearch = document.getElementById("doctor-search").value;
+            
+            if (location && doctorSearch) {
+                alert(`Searching for ${doctorSearch} in ${location}`);
+            } else {
+                alert("Please enter both location and search query.");
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0C1E5B;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-container {
+            margin-top: 50px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</body>
+</html>
