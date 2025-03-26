@@ -1,113 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor's Appointment - Services</title>
-    <link rel="stylesheet" href="../css/services.css">
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        body {
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Services Section */
+        .section {
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .card p {
+            margin: 15px 0;
+        }
+
+        .card strong {
+            font-size: 18px;
+            color: #28a745;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            color: #fff;
+            background: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <div class="navbar">
-        <h1>Doctor's Appointment</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
-    </div>
-</header>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <h1>Our Services</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Doctors</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<main>
-    <section class="services">
-        <h2>Our Services</h2>
-        <div id="services-list" class="services-container"></div>
-    </section>
-</main>
+    <!-- Services Section -->
+    <main class="section">
+        <h2>Explore Our Medical Services</h2>
+        <p>Choose from our range of expert medical services. Click "Learn More" for references.</p>
+        <div class="container" id="services-container"></div>
+    </main>
 
-<!-- Service Detail Modal -->
-<div class="overlay" id="overlay"></div>
-<div class="modal" id="service-modal">
-    <h2 id="modal-title"></h2>
-    <p id="modal-description"></p>
-    <p id="modal-price"></p>
-    <button class="close-btn" onclick="closeModal()">Close</button>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Doctor's Appointment. All rights reserved.</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2025 Doctor's Appointment. All rights reserved.</p>
-</footer>
+    <script>
+        // Services Data with References and Images
+        const services = [
+            {
+                name: "General Checkup",
+                price: "₹50",
+                description: "Comprehensive health check for overall well-being.",
+                image: "https://www.swaconhospital.com/wp-content/uploads/2019/09/34-5-reasons-why-you-need-a-regular-checkup-feat-1080x600.jpg",
+                reference: "https://www.healthline.com"
+            },
+            {
+                name: "Pediatrics",
+                price: "₹70",
+                description: "Child healthcare services, vaccinations, and consultations.",
+                image: "https://www.diginerve.com/wp-content/uploads/2022/12/Important-Topics-to-Master-Pediatrics-in-PG.webp",
+                reference: "https://www.aap.org"
+            },
+            {
+                name: "Dermatology",
+                price: "₹60",
+                description: "Treatment for skin issues, acne, and rashes.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4yVrcSastXQoVbPwf2ffqdFJ7_WJ7-0zC1w&s",
+                reference: "https://www.aad.org"
+            },
+            {
+                name: "Cardiology",
+                price: "₹120",
+                description: "Heart and vascular care with expert cardiologists.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCAQKvAGAfB6PqV8EceZrYcPjCPa8q0iJcXA&s",
+                reference: "https://www.heart.org"
+            },
+            {
+                name: "Orthopedic Consultation",
+                price: "₹150",
+                description: "Bone and joint care consultation.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6dLV_olXtp0DRPAi6u5dabdinOCyhOyVybQ&s",
+                reference: "https://orthoinfo.aaos.org"
+            }
+        ];
 
-<script>
-    // Service Data
-    const services = [
-        {
-            name: "General Checkup",
-            price: "$50",
-            description: "Comprehensive health check for overall well-being."
-        },
-        {
-            name: "Pediatrics",
-            price: "$70",
-            description: "Child healthcare services, vaccinations, and consultations."
-        },
-        {
-            name: "Dermatology",
-            price: "$60",
-            description: "Treatment for skin issues, acne, and rashes."
-        },
-        {
-            name: "Cardiology",
-            price: "$120",
-            description: "Heart and vascular care with expert cardiologists."
-        }
-    ];
+        const container = document.getElementById('services-container');
 
-    // DOM Elements
-    const servicesContainer = document.getElementById('services-list');
-    const modal = document.getElementById('service-modal');
-    const overlay = document.getElementById('overlay');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDescription = document.getElementById('modal-description');
-    const modalPrice = document.getElementById('modal-price');
-
-    // Display Services
-    function displayServices() {
-        servicesContainer.innerHTML = '';
-        services.forEach((service, index) => {
-            const card = document.createElement('div');
-            card.classList.add('service-card');
-            card.setAttribute('data-index', index);
-            card.innerHTML = `
+        // Display Services
+        function displayServices() {
+            container.innerHTML = '';
+            services.forEach(service => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                <img src="${service.image}" alt="${service.name}">
                 <h3>${service.name}</h3>
                 <p>${service.description}</p>
                 <strong>${service.price}</strong>
+                <br>
+                <a href="${service.reference}" target="_blank" class="btn">Learn More</a>
             `;
-            card.addEventListener('click', () => showModal(index));
-            servicesContainer.appendChild(card);
-        });
-    }
+                container.appendChild(card);
+            });
+        }
 
-    // Show Modal
-    function showModal(index) {
-        const service = services[index];
-        modalTitle.textContent = service.name;
-        modalDescription.textContent = service.description;
-        modalPrice.textContent = `Price: ${service.price}`;
-        modal.style.display = 'block';
-        overlay.style.display = 'block';
-    }
-
-    // Close Modal
-    function closeModal() {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-    }
-
-    window.addEventListener('DOMContentLoaded', displayServices);
-</script>
+        // Load Services on Page Load
+        window.addEventListener('DOMContentLoaded', displayServices);
+    </script>
 
 </body>
+
 </html>
