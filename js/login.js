@@ -1,21 +1,23 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent form submission
+// Example of user credentials for demo purposes
+const users = [
+    { username: 'doctor', password: 'password123' },
+    { username: 'nurse', password: 'nursepass' }
+];
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const errorMessage = document.getElementById("error-message");
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-    // Simple validation for empty fields
-    if (username === "" || password === "") {
-        errorMessage.textContent = "Both fields are required!";
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Simple client-side validation
+    const user = users.find(user => user.username === username && user.password === password);
+
+    if (user) {
+        // Store the username in localStorage
+        localStorage.setItem('loggedInUser', JSON.stringify(user));
+        window.location.href = 'dashboard.html'; // Redirect to a dashboard page after successful login
     } else {
-        // Simulate a successful login (you can replace this with an actual validation)
-        if (username === "user" && password === "password123") {
-            errorMessage.textContent = "";
-            alert("Login successful!");
-            // Redirect to another page or do something else after successful login
-        } else {
-            errorMessage.textContent = "Invalid username or password!";
-        }
+        document.getElementById('error-message').textContent = 'Invalid username or password.';
     }
 });
