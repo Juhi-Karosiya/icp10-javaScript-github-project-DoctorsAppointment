@@ -1,11 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APPOINTMENT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-<body>
-    <h1>  this is appointment page</h1>
-</body>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="../css/appoint.css">
+<script src="../js/appoint.js"> </script>
+<img src="../images">
+
+<nav class="navbar-container">
+  <div class="main-section">
+    <a href="index.html">
+    <img src="./icons/logo.png" class="logo" />
+  </a>
+    <p class="title">MediCare Hub</p>
+
+  </div>
+
+  <div class="heading-container">
+    <a href="./pages/doctor.html" class="heading">Doctor's</a>
+    <a href="./pages/appoint.html" class="heading">Appointment</a>
+    <a href="./pages/ordermeds.html" class="heading">Order Medicine</a>
+    <a href="./pages/services.html" class="heading">Service</a>
+    <a href="./pages/about_us.html" class="heading">About Us</a>
+
+    <a href="login.html" class="heading log-sign-heading">Log in / Sign in</a>
+    </div>
+  </div>
+</nav>
+<body >
+
+  <img src="../images/doc-banner-desktop.svg" style="width: 1500px;"/>
+ 
+  <div class="mainpart">
+  <div class="doctor-profile" >
+    
+    <div class="doctor-img">
+      <img src="../images/dr.png" alt="Doctor Image" />
+    </div>
+    <div class="doctor-info">
+      
+    
+      
+      
+      <h3>Dr.Hemant patil</h3>
+
+      <p>
+        Dentist <br />
+        18 year experience overall<br />
+        <b> Rajapeth .Amravati🩸</b> &nbsp;patil hospital <br />
+        ₹200 consultation fee at clinic
+      </p>
+
+      <p><b>Qualifications:</b> BDS, MDS (Oral Surgery)</p>
+      
+
+          <p><b>Available Timings:</b><br>
+            
+              Mon-Fri: 10:00 AM - 5:00 PM <br>
+              Sat-Sun: 11:00 AM - 3:00 PM
+          </p>
+          <a href="tel:8787878787">
+              <img src="../images/phone-call.png" class="callogo">
+          </a>
+      
+    </div>
+
+  
+    
+    
+  </div>
+
+  <div class="mar">
+      <body>
+
+          <div class="form_arrange">
+          <H1> patient detail</details></H1>
+          
+          <input type="text" id="inputFullName" placeholder="Enter your full name" required   class="setbox" />
+          <br>
+          <input type="text" id="inputtasks" placeholder="Enter your city" class="setbox" required>
+          <br>
+      
+          
+      
+          
+            <select id="select_gender"   class="setbox">
+              
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <br>
+      
+            
+                <select id="select_slot"   class="setbox">
+                  <option>select time</option>
+                  <option value="9:00 to 9:15 AM">9:00 to 9:15 AM</option>
+                  <option value="9:15 to 9:30 AM">9:15 to 9:30 AM</option>
+                  <option value="v9:30 to 9:45 AM">9:30 to 9:45 AM</option>
+                  <option value="9:45 to 9:55 AM">9:45 to 10:00 AM</option>
+                  <option value="0:10 to 10:15 AM">10:00 to 10:15 AM</option>
+                  <option value="10:15 to 10:30 AM">10:15 to 10:30 AM</option>
+                </select>
+          <br>
+            <input type="number" id="input-age" placeholder="Enter your age" required class="setbox" />
+            <br>
+            <input type="date" id="time" required   class="setbox"/>
+            <br>
+            
+      
+          <button onclick="addTasks()" class="button">Set Appointment </button>
+      
+          </div>
+      </form>
+      </div>
+      </div>
+
+
+    </body>
+           <div id="formlist" class="form_design"></div>
+
+           <footer class="footer">
+            <div  class="footer-container">
+              <img src="./icons/logo.png" class="footer-logo" />
+              <p class="footer-title">MediCare Hub</p>
+            </div>
+    
+            <div class="link-container">
+                <h3  class="link-heading">Quick Links</h3>
+              
+              <div class="pages-container">
+                <ul type="none">
+                  <li class="footer-list" ><a href="index.html" class="footer-list-link">Home</a></li>
+                  <li class="footer-list"><a href="#" class="footer-list-link">Contact Us</a></li>
+                  <li class="footer-list"><a href="./pages/services.html" class="footer-list-link">Services</a></li>
+                  <li class="footer-list"><a href="./pages/ordermeds.html" class="footer-list-link">Order Medicine</a></li>
+                  <li class="footer-list"><a href="./pages/about_us.html" class="footer-list-link">About Us</a></li>
+                  <li class="footer-list"><a href="./pages/appoint.html" class="footer-list-link">Appointment</a></li>
+    
+                </ul>
+      
+                  <ul type="none">
+                  <li class="footer-list"><a href="./pages/doctor.html" class="footer-list-link">Doctor's</a></li>
+                  <li class="footer-list"><a href="./pages/feedback.html" class="footer-list-link">Feedback</a></li>
+                  <li class="footer-list"><a href="./pages/blog_news.html" class="footer-list-link">Blog & News</a></li>
+                  <li class="footer-list"><a href="./pages/career.html" class="footer-list-link">Career</a></li>
+                  <li class="footer-list"><a href="./pages/faq.html" class="footer-list-link">FAQ's</a></li>
+                
+                </ul>
+              </div>
+            </div>
+    
+    
+            <div class="address">
+              <h3 class="address-heading">Get In Touch</h3>
+              <p class="address-description">D-4 MIDC, Chikalthana<br>
+              Chhatrapati Sambhajinagar, 431006, India<br>
+              <img src="./icons/mobile.png" class="contact-us-icon"/>   <a href="callto: 91-22-2653 4444" class="contact-us">91-22-2653 4444</a><br>
+              <img src="./icons/email.png" class="contact-us-icon"/>  <a href="mailto:contactus@medicareHub.com" class="contact-us">contactus@medicareHub.com</a><br>
+              Corporate Identity Number: L24230MH1999PLC120720
+              </p>
+    
+              <img src="./images/home-7.png" class="bottom-img"/>
+              <img src="./images/home-8.png" class="bottom-img"/>
+              </div>
+              
+           
+          </footer>
+
+
+
 </html>
