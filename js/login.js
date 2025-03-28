@@ -1,22 +1,18 @@
-localStorage.setItem("username", "testuser");
-localStorage.setItem("password", "password123");
-
-document.getElementById("login-form").addEventListener("submit", function(event) {
+document.getElementById('login-Form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Get the entered values from the form
-    let enteredUsername = document.getElementById("login-username").value;
-    let enteredPassword = document.getElementById("login-password").value;
+    const loginUsername = document.getElementById('Username').value;
+    const loginPassword = document.getElementById('Password').value;
 
-    // Get the stored values from localStorage
-    let storedUsername = localStorage.getItem("username");
-    let storedPassword = localStorage.getItem("password");
+    // Retrieve user data from localStorage
+    const storedUser = JSON.parse(localStorage.getItem(loginUsername));
 
-    // Compare entered values with stored values
-    if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
-        alert("Login successful!");
-        window.location.href = "dashboard.html"; // Redirect to dashboard or another page
+    // Check if the username exists and if the password matches
+    if (storedUser && storedUser.password === loginPassword) {
+        alert('Login successful!');
+        // Redirect to home page or dashboard
+        window.location.href = 'home.html';
     } else {
-        alert("Invalid credentials. Please try again.");
+        alert('Invalid username or password.');
     }
 });

@@ -5,9 +5,14 @@ document.getElementById("register-form").addEventListener("submit", function(eve
   let password = document.getElementById("password").value;
 
   if (username && password) {
-      // Save user credentials in local storage
-      localStorage.setItem("username", username);
-      localStorage.setItem("password", password);
+      // Create a user object
+      let user = {
+          username: username,
+          password: password
+      };
+
+      // Save the user credentials as a JSON string in localStorage
+      localStorage.setItem("user", JSON.stringify(user));
 
       alert("Registration successful!");
       window.location.href = "login.html"; // Redirect to login page
@@ -15,3 +20,4 @@ document.getElementById("register-form").addEventListener("submit", function(eve
       alert("Please fill in both fields.");
   }
 });
+
