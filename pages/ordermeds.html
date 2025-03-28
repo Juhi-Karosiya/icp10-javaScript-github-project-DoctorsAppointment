@@ -1,52 +1,30 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> medicine </title>
+    <title>Medicine Order</title>
     <style>
-         body {
-            background-color: rgb(225, 225, 250);
-         font-family: Arial, sans-serif;
-         padding: 20px;
-          text-align: center;
-           }
-           #heds{ 
-            color:darkgreen;
-           }
-     #search-container { 
-        display: flex;
-         justify-content: center; 
-         align-items: center;
-          margin-bottom: 20px;
-           }
-           #clear-search {
-         margin-left: 10px;
-          cursor: pointer;
-           background: red;
-            color: white;
-             border: none; 
-             padding: 5px; 
-             }
-        .medicine-card { 
-        border: 1px solid #ddd; 
-        padding: 10px;
-         margin: 10px;
-          display: inline-block;
-           position: relative;
+       
+           body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+            
+        }
+        .medicine-card {
+         border: 1px solid #ddd;
+          padding: 12px; 
+          margin: 14px;
+           display: inline-block;
+            position: relative; 
             }
-            .medicine-logo {
-                 position: absolute; 
-                top: 5px; 
-                right: 5px; 
-                width: 30px; 
-                height: 30px;
-             }
-             .cart-controls { display: flex;
+        .cart-controls { 
+        display: flex;
          align-items: center;
           justify-content: center;
            }
-           .cart-controls button { 
+        .cart-controls button { 
         margin: 5px;
          }
          #search-container {
@@ -68,15 +46,23 @@
             width: 300px;
             font-size: 16px;
         }
-       
-        #cart-summary {
+        #clear-search {
+         margin-left:10px;
+          cursor: pointer;
+           background: red;
+            color: white;
+             border: none; 
+             padding: 12px; 
+             }
+            
+         #cart-summary {
          margin-top: 20px;
         padding: 10px;
         border: 1px solid #ddd;
         display: inline-block;
         background: #f9f9f9; 
              }
-             .medicine-img { 
+        .medicine-img { 
         width: 100px;
         height: 100px;
         display: block; 
@@ -85,7 +71,7 @@
         mark {
          background-color: yellow; 
          }
-         #confirm-order {
+        #confirm-order {
         background-color: green;
         color: white; 
         border: none;
@@ -97,10 +83,10 @@
         transition: background 0.3s ease-in-out; 
         margin-top: 20px;
                 }
-                #confirm-order:hover {
+#confirm-order:hover {
          background-color: darkgreen;
-          } 
-          #thank-you-message { 
+          }        
+        #thank-you-message { 
         display: none;
          position: fixed;
           top: 50%;
@@ -112,41 +98,46 @@
               border-radius: 10px;
                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 }
-             </style>
+    </style>
 </head>
 <body>
-    
-    <h1> MEDICINES </h1>
-    <h1 id="heds" >Order Medicine Online </h1>
+    <h1>Order Medicine Online</h1>
     <div id="search-container">
+        <img src="/images/meclinic-logo.jpg" alt="Med+ Clinic" class="logo">
         <input type="text" id="search-box" placeholder="Search medicine..." onkeyup="searchMedicine()">
         <button id="clear-search" onclick="clearSearch()">Clear</button>
+            
     </div>
+    <div id="cart-summary"></div>
+    <button id="confirm-order" onclick="confirmOrder()">Confirm Order</button>
     <h2>Total Items in Cart: <span id="total-items" onclick="showThankYou()">0 ✅</span></h2>
-    <div id="medicine-list"></div>
+    <div id="medicine-list">
+        
     <div id="thank-you-message">THANK YOU FOR VISITING.</div>
+    
     <script>
         const medicines = ["Paracetamol", "Ibuprofen", "Amoxicillin", "Cetirizine", "Aspirin",
          "Metformin", "Atorvastatin", "Omeprazole", "Losartan", "Albuterol", "Ranitidine", "Doxycycline",
           "Lisinopril", "Prednisone", "Clarithromycin"];
         
         const medicineImages = {
-            "Paracetamol":"images/paracetamol.jpg",
-            "Ibuprofen": "images/ibuprofen.jpg",
-            "Amoxicillin":"images/amoxicillin.jpeg",
-            "Cetirizine": "images/cetrizine.png",
-            "Aspirin": "images/aspirin.jpg",
-            "Metformin": "images/metform.jpg",
-            "Atorvastatin": "images/atorvastatin.jpg",
-            "Omeprazole": "images/omeprazole.jpg",
-            "Losartan": "images/losartan.jpg",
-            "Albuterol": "images/albuterol.jpg",
-            "Ranitidine": "images/ranitidine.jpg",
-            "Doxycycline": "images/doxycycline.jpg",
-            "Lisinopril": "images/lisinopril.jpg",
-            "Prednisone": "images/prednisone.jpg",
-            "Clarithromycin": "images/clarithromycin.jpg"
+            "Paracetamol": "/images/paracetamol.jpg",
+            "Ibuprofen": "/images/ibuprofen.jpg",
+            "Amoxicillin":"/images/amoxicillin.jpeg",
+            "Cetirizine": "/images/cetrizine.png",
+            "Aspirin": "/images/aspirin.jpg",
+            "Metformin": "/images/metform.jpg",
+            "Atorvastatin": "/images/atorvastatin.jpg",
+            "Omeprazole": "/images/omeprazole.jpg",
+            "Losartan": "/images/Losartan.jpg",
+            "Albuterol": "/images/Albuterol.jpg",
+            "Ranitidine": "/images/ranitidine.jpg",
+            "Doxycycline": "/images/doxycycline.jpg",
+            "Lisinopril": "/images/lisinopril.jpg",
+            "Prednisone": "/images/prednisone.jpg",
+            "Clarithromycin": "/images/clarithromycin.jpg"
         };
+
         let cart = {};
         
         function renderMedicines(filter = "") {
@@ -156,8 +147,8 @@
                 let highlightedMed = med.replace(new RegExp(filter, "gi"), match => `<mark>${match}</mark>`);
                 cart[med] = cart[med] || 0;
                 list.innerHTML += `
-            <div class='medicine-card'>
-                        <img src='medicine-logo.png' alt='logo' class='medicine-logo'>
+                    <div class='medicine-card'>
+                        <img src='${medicineImages[med]}' alt='${med}' class='medicine-img'>
                         <h3>${highlightedMed}</h3>
                         <div class='cart-controls'>
                             <button onclick="decrement('${med}')">-</button>
@@ -170,6 +161,7 @@
             updateTotal();
             updateCartSummary();
         }
+
         function increment(med) {
             cart[med]++;
             document.getElementById(`count-${med}`).innerText = cart[med];
@@ -183,22 +175,12 @@
             updateTotal();
             updateCartSummary();
         }
+        
         function updateTotal() {
             let total = Object.values(cart).reduce((sum, count) => sum + count, 0);
             document.getElementById("total-items").innerText = total + " ✅";
         }
-        function updateCartSummary() {
-            let summary = "<h3>Cart Summary</h3><ul>";
-            let hasItems = false;
-            for (let med in cart) {
-                if (cart[med] > 0) {
-                    summary += `<li>${med}: ${cart[med]}</li>`;
-                    hasItems = true;
-                }
-            }
-            summary += "</ul>";
-            document.getElementById("cart-summary").innerHTML = hasItems ? summary : "<p>Your cart is empty</p>";
-        }
+        
         function updateCartSummary() {
             let summary = "<h3>Cart Summary</h3><ul>";
             let hasItems = false;
@@ -221,12 +203,28 @@
             document.getElementById("search-box").value = "";
             renderMedicines();
         }
+        
         function confirmOrder() {
             alert("Your order is confirmed!");
             window.location.href = "order-confirmed.html";
         }
         
-
+        function showThankYou() {
+            let message = document.getElementById("thank-you-message");
+            message.style.display = "block";
+            
+            document.body.addEventListener("click", function removeMessage() {
+                message.style.display = "none";
+                document.body.removeEventListener("click", removeMessage);
+            });
+        }
+        
+        renderMedicines();
     </script>
 </body>
-</html>
+</html> 
+
+        
+       
+
+    
