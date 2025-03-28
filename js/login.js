@@ -1,18 +1,23 @@
-document.getElementById('login-Form').addEventListener('submit', function(event) {
+document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault();
-
-    const loginUsername = document.getElementById('Username').value;
-    const loginPassword = document.getElementById('Password').value;
-
-    // Retrieve user data from localStorage
-    const storedUser = JSON.parse(localStorage.getItem(loginUsername));
-
-    // Check if the username exists and if the password matches
-    if (storedUser && storedUser.password === loginPassword) {
-        alert('Login successful!');
-        // Redirect to home page or dashboard
-        window.location.href = 'login.html';
+  
+    let username = document.getElementById("login-username").value;
+    let password = document.getElementById("login-password").value;
+  
+    if (username && password) {
+        // Create a user object
+        let user = {
+            username:  login-username,
+            password: login-password
+        };
+  
+        // Save the user credentials as a JSON string in localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+  
+        alert("Login successful!");
+        window.location.href = "index.html"; // Redirect to login page
     } else {
-        alert('Invalid username or password.');
+        alert("Please fill in both fields.");
     }
-});
+  });
+  
