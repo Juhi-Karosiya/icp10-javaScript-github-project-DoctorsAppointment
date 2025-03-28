@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #b7c0db;
+            background-color: #dde0e9;
             text-align: center;
             color: white;
             margin: 0;
@@ -153,7 +153,7 @@
             },
             {
                 name: "Krushna Orthodontic and Dental Clinic",
-                specialty: "Dentist",
+                specialty: "Dentist Clinic",
                 experience: "1 - 12 years",
                 location: "Sinhagad Road",
                 fee: "₹300",
@@ -314,7 +314,7 @@
                             <p><strong>Location:</strong> ${doctor.location}</p>
                             <p><strong>Fee:</strong> ${doctor.fee}</p>
                             <p><strong>Rating:</strong> ${doctor.rating}</p>
-                            <a href="pages/appoint.html?doctor=${encodeURIComponent(doctor.name)}" class="book-btn">Book Appointment</a>
+                            <button class="book-btn">Book Appointment</button>
                         </div>
                     </div>`;
                 doctorListDiv.innerHTML += doctorCard;
