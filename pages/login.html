@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="./../css/login.css">
 </head>
 <body>
@@ -13,23 +13,38 @@
             <h3 class="color">Dr. Appointment</h3>
           </p>
         <h2>Login To Your Account</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="login-username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="login-password" required>
-            </div>
-            <div class="input-group">
-                <button class="btn" type="submit"><a href="./../index.html" id="submit">Login</a></button>
-            </div>
+        <form id="loginForm">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" required><br><br>
+
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required><br><br>
+
+            <button type="submit">Login</button>
         </form>
+
         <p>Don't have an account? <a href="registration.html">Register here</a></p>
     </div>
-   
 
-    <script src="./../js/login.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const loginUsername = document.getElementById('loginUsername').value;
+            const loginPassword = document.getElementById('loginPassword').value;
+
+            // Retrieve user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem(loginUsername));
+
+            // Check if the username exists and if the password matches
+            if (storedUser && storedUser.password === loginPassword) {
+                alert('Login successful!');
+                // Redirect to home page or dashboard
+                window.location.href = 'C:\GD\icp10-javaScript-github-project-DoctorsAppointment\index.html';
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
 </body>
 </html>
