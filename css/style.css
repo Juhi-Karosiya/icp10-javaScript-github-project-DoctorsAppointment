@@ -3,18 +3,11 @@ body {
   padding: 0;
 }
 .navbar-container {
-<<<<<<< HEAD
   background-color: #fa6464;
   display: flex;
   justify-content: space-between;
   padding: 5px;
   color: white;
-=======
-  background-color: lightblue;
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
->>>>>>> f9f1ec4454933af39a2da3e5a5bdb6727f19bd1a
 }
 
 .main-section {
@@ -31,26 +24,16 @@ body {
   text-decoration: none;
   margin: 10px 15px;
   font-size: 25px;
-<<<<<<< HEAD
   color: white;
-=======
-  color: black;
->>>>>>> f9f1ec4454933af39a2da3e5a5bdb6727f19bd1a
   border: none;
   padding: 5px;
 }
 
 .heading:hover {
-<<<<<<< HEAD
   background-color: #cce6ff;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px 2px #cce6ff;;
-=======
-  background-color: #0099cc;
-  color: whitesmoke;
-  border-radius: 5px;
->>>>>>> f9f1ec4454933af39a2da3e5a5bdb6727f19bd1a
 }
 
 .logo {
@@ -73,7 +56,6 @@ body {
   border: none;
 }
 .log-sign-heading {
-<<<<<<< HEAD
   padding: 5px;
   border-radius: 5px;
   margin-left: 60px;
@@ -84,12 +66,6 @@ body {
 .log-sign-heading:hover{
   background-color:#0099cc ;
   color: white;
-=======
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 5px;
-  margin-left: 60px;
->>>>>>> f9f1ec4454933af39a2da3e5a5bdb6727f19bd1a
 }
 .card-background-img {
   width: 100%;
@@ -127,7 +103,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-<<<<<<< HEAD
 .card-message{
   position: absolute;
   top: 480px;
@@ -303,64 +278,3 @@ body {
   margin: auto 40px;
   cursor: pointer;
 }
-=======
-.video-map-container{
-  padding: 20px 50px;
-  margin-bottom: 200px;
-}
-.video-heading{
-  text-align: center;
-  font-size: 40px;
-}
-.home-video{
-  height: 500px;
-  width: 900px;
-  margin: 5px 250px;
-  
-}
-.blur-background-container{
-  position: relative;
-  background-color: black;
-  width: 100%;
-  height: 180px;
-  margin-bottom:50px;
-}
-.blur-background-logo-1{
-  position: absolute;
-  right:1180px;
-  top: -50px;
-  color: white;
-}
-.blur-background-logo-heading{
-   font-weight: bold;
-   font-size: 30px;
-   margin-top: 5px;
-   
-
-}
-.blur-background-logo-description{
-  font-size: 20px;
-  margin-top: 5px ;
-}
-.blur-background-logo-2{
-  position: absolute;
-  right:870px;
-  top: -50px;
-}
-.blur-background-logo-3{
-  position: absolute;
-  right:550px;
-  top: -50px;
-}
-.blur-background-logo-4{
-  position: absolute;
-  right:200px;
-  top: -50px;
-}
-
-.map{
-  margin-left: 370px;
-  width: 800px;
-  
-}
->>>>>>> f9f1ec4454933af39a2da3e5a5bdb6727f19bd1a
