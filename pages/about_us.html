@@ -1,11 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us  Page</title>
+    <title>About Us Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        body {
+            font-family: "Lexend", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .heading {
+            color: #000;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Lexend", sans-serif;
+        }
+
+        span {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Lexend", sans-serif;
+        }
+
+        .heading1 {
+            font-size: 35px;
+            font-family: "Lexend", sans-serif;
+
+        }
+
+        .info {
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .spec {
+            font-size: 18px;
+            font-family: "Lexend", sans-serif;
+        }
+
+        #about {
+            padding: 50px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .doctor-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 200px;
+            margin-top: 30px;
+        }
+
+        .doctor-info .doctor-img {
+            width: 400px;
+            height: 400px;
+            border-radius: 10%;
+            object-fit: cover;
+        }
+
+        .doctor-info .doctor-description {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .doctor-info h3 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .about-us-container {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card img {
+            width: 40%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.25em;
+            margin-bottom: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .text-box {
+            margin: 20px;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(2, 138, 138);
+            box-shadow: 0px 2px 2px 0px rgb(0, 28, 28);
+
+        }
+
+        .text-box:focus {
+            outline: none;
+        }
+
+        .btn {
+            margin: 20px;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(2, 138, 138);
+            box-shadow: 0px 2px 2px 0px rgb(0, 28, 28);
+        }
+
+        .city-info {
+            font-size: 30px;
+            font-family: ' Courier';
+            padding: 70px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .doctor-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .doctor-info .doctor-img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <section id="about">
+        <h1 class="heading"><span>ABOUT</span>US</h1>
+        <div class="doctor-info">
+            <img src="../images/about_img.jpg" alt="Doctor Image" class="doctor-img">
+            <div class="doctor-description">
+                <h3 class="heading1">We take care of your healthy life</h3>
+                <p class="info">Dedicated to providing compassionate, personalized healthcare, we focus on patient
+                    well-being
+                    through advanced treatments, expert care, and a holistic approach to ensure optimal health and
+                    comfort for every patient.</p>
+                <p><strong class="spec">Specialization:</strong> General Medicine, Preventative Healthcare, Wellness</p>
+                <button id="more-info-btn">Read More</button>
+            </div>
+        </div>
+
+</section>
+
+    <div class="container">
+        <div class="card-grid">
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 1">
+                <h3>Shivani</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 2">
+                <h3>Sakshi</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 2">
+                <h3>Srushti</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 2">
+                <h3>Juhi</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 2">
+                <h3>Saniya</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 2">
+                <h3>Siddhee</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_girls.png" alt="Card 2">
+                <h3>Gayatri</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_boys.png" alt="Card 2">
+                <h3>Gajanan</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_boys.png" alt="Card 2">
+                <h3>Hrushikesh</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_boys.png" alt="Card 2">
+                <h3>Aditya</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_boys.png" alt="Card 2">
+                <h3>Gaurav</h3>
+            </div>
+
+            <div class="card">
+                <img src="../images/doctor_boys.png" alt="Card 2">
+                <h3>Vedant</h3>
+            </div>
+        </div>
+    </div>
+
     
+    <script>
+        document.getElementById('more-info-btn').addEventListener('click', function () {
+            alert('A doctor, or physician, is a skilled healthcare professional who diagnoses, treats, and prevents diseases and injuries, offering medical advice and care to patients. They require extensive education and training, often specializing in specific areas of medicine. ');
+        });
+    </script>
 </body>
 </html>
