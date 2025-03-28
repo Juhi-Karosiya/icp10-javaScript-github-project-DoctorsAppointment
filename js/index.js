@@ -127,31 +127,33 @@ function ImageChange(num) {
       <p class="para-names">PRADEEP MISHRA</p>`;
       document.getElementById("filledCircle1").src = "./images/grey.png";
       document.getElementById("filledCircle2").src = "./images/grey.png";
-      document.getElementById("filledCircle3").src = "grey.png";
-      document.getElementById("filledCircle4").src = "grey.png";
-      document.getElementById("filledCircle5").src = "grey.png";
-      document.getElementById("filledCircle6").src = "grey.png";
-      document.getElementById("filledCircle7").src = "grey.png";
-      document.getElementById("filledCircle8").src = "grey.png";
+      document.getElementById("filledCircle3").src = "./images/grey.png";
+      document.getElementById("filledCircle4").src = "./images/grey.png";
+      document.getElementById("filledCircle5").src = "./images/grey.png";
+      document.getElementById("filledCircle6").src = "./images/grey.png";
+      document.getElementById("filledCircle7").src = "./images/grey.png";
+      document.getElementById("filledCircle8").src = "./images/grey.png";
       document.getElementById("filledCircle9").src = "./images/red.png";
-      document.getElementById("filledCircle10").src = "grey.png";
+      document.getElementById("filledCircle10").src = "./images/grey.png";
   }else if (num == 10){
     defaultMessage.innerHTML = `<p class="main-paragraph">"My Journey at MediCare has been a transformative experience that has
     shaped my professional and personal growth." </p> 
       <p class="para-names">LCS SRI VISHNU</p>`;
-      document.getElementById("filledCircle1").src = "grey.png";
-      document.getElementById("filledCircle2").src = "grey.png";
-      document.getElementById("filledCircle3").src = "grey.png";
-      document.getElementById("filledCircle4").src = "grey.png";
-      document.getElementById("filledCircle5").src = "grey.png";
-      document.getElementById("filledCircle6").src = "grey.png";
-      document.getElementById("filledCircle7").src = "grey.png";
-      document.getElementById("filledCircle8").src = "grey.png";
-      document.getElementById("filledCircle9").src = "grey.png";
+      document.getElementById("filledCircle1").src = "./images/grey.png";
+      document.getElementById("filledCircle2").src ="./images/grey.png";
+      document.getElementById("filledCircle3").src = "./images/grey.png";
+      document.getElementById("filledCircle4").src = "./images/grey.png";
+      document.getElementById("filledCircle5").src = "./images/grey.png";
+      document.getElementById("filledCircle6").src = "./images/grey.png";
+      document.getElementById("filledCircle7").src ="./images/grey.png";
+      document.getElementById("filledCircle8").src = "./images/grey.png";
+      document.getElementById("filledCircle9").src = "./images/grey.png";
       document.getElementById("filledCircle10").src ="./images/red.png";
 
   }
 }
+
+
 
 
 
