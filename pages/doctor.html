@@ -98,18 +98,43 @@
         .book-btn:hover {
             background-color: #218838;
         }
+
+        @media (max-width: 768px) {
+                .search-box {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            input {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .doctor-card {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                max-width: 400px;
+                padding: 20px;
+            }
+            
+            .doctor-card img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="search-container">
-        <h2>Find and Book a Doctor</h2>
+        <h1>Find and Book a Doctor</h1>
         <div class="search-box">
-            <input type="text" id="searchCity" placeholder="🔍 Search by City">
-            <button onclick="searchByCity()">Search by City</button>
+            <input type="text" id="searchCity" placeholder="🔍 Search City">
+            <button onclick="searchByCity()">Search </button>
         </div>
         <div class="search-box">
             <input type="text" id="searchSpecialty" placeholder="🔍 Search Doctors,Clinics,Hospitals,etc.">
-            <button onclick="searchBySpecialty()">Search by Type</button>
+            <button onclick="searchBySpecialty()">Search</button>
         </div>
     </div>
 
@@ -289,7 +314,7 @@
                             <p><strong>Location:</strong> ${doctor.location}</p>
                             <p><strong>Fee:</strong> ${doctor.fee}</p>
                             <p><strong>Rating:</strong> ${doctor.rating}</p>
-                            <button class="book-btn">Book Appointment</button>
+                            <a href="pages/appoint.html?doctor=${encodeURIComponent(doctor.name)}" class="book-btn">Book Appointment</a>
                         </div>
                     </div>`;
                 doctorListDiv.innerHTML += doctorCard;
