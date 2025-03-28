@@ -11,7 +11,7 @@ document.getElementById('login-Form').addEventListener('submit', function(event)
     if (storedUser && storedUser.password === loginPassword) {
         alert('Login successful!');
         // Redirect to home page or dashboard
-        window.location.href = 'home.html';
+        window.location.href = 'login.html';
     } else {
         alert('Invalid username or password.');
     }
