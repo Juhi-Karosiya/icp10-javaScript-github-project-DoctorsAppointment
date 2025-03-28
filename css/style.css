@@ -1,0 +1,386 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar-container {
+  background-color: #fa6464;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+}
+
+.main-section {
+  display: flex;
+  padding: 10px;
+}
+
+.heading-container {
+  /* margin: 30px 96px; */
+  display: flex;
+  align-items: center;
+}
+.heading {
+  text-decoration: none;
+  margin: 10px 15px;
+  font-size: 25px;
+  color: white;
+  border: none;
+  padding: 5px;
+}
+
+.heading:hover {
+  background-color: #cce6ff;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 2px #cce6ff;;
+}
+
+.logo {
+  margin: 5px 20px;
+  height: 100px;
+}
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: auto 10px;
+}
+
+.searchBar {
+  background-color: lightblue;
+  width: 70px;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-size: 20px;
+  color: black;
+  border: none;
+}
+.log-sign-heading {
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 60px;
+  background-color: #80bfff;
+  color: black;
+  box-shadow: 0 0 5px 4px #80bfff;
+}
+.log-sign-heading:hover{
+  background-color:#0099cc ;
+  color: white;
+}
+.card-background-img {
+  width: 100%;
+  height: 600px;
+}
+.card-container {
+  position: relative;
+}
+.card-heading {
+  position: absolute;
+  right: 50px;
+  top: 5px;
+  font-size: 40px;
+  color: #ed1c24;
+  font-family: "Khula", Sans-serif;
+  font-weight: 700;
+}
+.card-description {
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  font-size: 25px;
+  text-align: end;
+  font-weight: bolder;
+}
+.card-btn {
+  position: absolute;
+  top: 350px;
+  right: 100px;
+  border: none;
+  font-size: 27px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #ed1c24;
+  color: #fff;
+  cursor: pointer;
+}
+.card-message{
+  position: absolute;
+  top: 480px;
+  font-size: 20px;
+  padding-left: 50px;
+  text-align:justify;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.message-writer{
+  text-align: end;
+  margin: 10px;
+  font-weight: bold;
+}
+.video-map-container {
+  padding: 20px 50px;
+  margin-bottom: 200px;
+ 
+}
+.video-heading {
+  text-align: center;
+  font-size: 40px;
+  color: green;
+  background-color: rgb(142, 201, 142);
+  width: 100%;
+  padding: 10px 0px;
+}
+.youtube-video{
+  margin: 20px 280px;
+  border: 1px solid black;
+}
+.home-video {
+  height: 500px;
+  width: 900px;
+  margin: 30px 250px;
+}
+.voice-container{
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+.voice-sub-container{
+  height: 500px;
+  width: 450px;
+  padding: 10px;
+  box-shadow: 0 0 5px 3px grey;
+}
+.voice-heading{
+  text-align: center;
+  color:green;
+}
+.voice-img{
+  height: 500px;
+  width: 500px;
+  padding: 10px;
+  box-shadow: 0 0 5px 3px grey;
+}
+
+#main-container {
+  height: 250px;
+  width: 380px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  display: block;
+  
+}
+.cover-para{
+  font-size:25px;
+}
+.logo-img {
+  height: 20px;
+  margin:  56px 10px;
+  cursor: pointer;
+  
+}
+.main-paragraph{
+   font-size: 25px;
+   font-family:'Times New Roman', Times, serif;
+   text-align: start;
+   margin:20px;
+   text-align: center;
+}
+.para-names{
+  text-align: center;
+  font-size: 25px;
+  color: red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 70px;
+}
+.card-container-2-img {
+  width: 100%;
+  height: 170px;
+  margin-top: 180px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.sub-card-container {
+  display: flex;
+  position: absolute;
+ top: 2430px;
+}
+.sub-card-content {
+  margin-left: 165px;
+}
+.sub-card-img{
+  position: absolute;
+  top: -130px;
+}
+.sub-card-sub-content{
+  color: white;
+  margin-right: 30px;
+}
+.sub-card-numbers{
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+.sub-card-heading{
+  font-size: 20px;
+}
+.explore-btn-container{
+  background-color: #ffcccc;
+ 
+}
+.explore-heading{
+  text-align: center;
+  color: green;
+  background-color: rgb(142, 201, 142);
+  font-size: 40px;
+  padding: 10px;
+}
+.explore-btn{
+  font-size: 20px;
+  padding: 10px;
+  width: 180px;
+  border: none;
+  margin: 50px 150px;
+  border-radius: 20px;
+  box-shadow: 0 0 2px 3px #e60000;
+  background-color: #ce2f2f;
+  color: white;
+}
+.map {
+  margin-left: 370px;
+  width: 800px;
+  margin-bottom: 100px;
+  border: 2px solid black;
+}
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: #262626;
+  display: flex;
+  gap: 50px;
+
+}
+.footer-container {
+  display: flex;
+  
+}
+.footer-logo {
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-right: 15px;
+  height: 150px;
+  cursor: pointer;
+}
+.footer-title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 130px;
+  cursor: pointer;
+}
+.link-container {
+  color: #fff;
+  margin-left: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin-top: 10px; */
+}
+.link-heading {
+  margin-left: 35px;
+  cursor: pointer;
+}
+.pages-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  border-top: 1px solid white;
+  cursor: pointer;
+}
+.footer-list {
+  margin-top: 8px;
+  cursor: pointer;
+}
+.footer-list-link{
+  text-decoration: none;
+  color: white;
+}
+.address {
+  color: white;
+  font-size: 19px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.address-heading {
+  font-size: 23px;
+  cursor: pointer;
+}
+.address-description {
+  border-top: 1px solid white;
+  padding-top: 20px;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.contact-us-icon {
+  height: 25px;
+  cursor: pointer;
+}
+.contact-us {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.bottom-img {
+  margin: auto 40px;
+  cursor: pointer;
+}
+
+
+@media(max-width:700px){
+.card-container{
+  width: 100%;
+}
+.card-background-img{
+  height: 400px;
+}
+.card-heading {
+ position:absolute;
+  right: 0px;
+  left: 10px;
+  top: 0px;
+  font-size: 23px;
+  color: #ed1c24;
+  font-family: "Khula", Sans-serif;
+  font-weight: 700;
+}
+.card-description {
+font-size: 10px;
+right:10px;
+top: 50px;
+}
+.card-btn {
+  position: absolute;
+  top:200px;
+  right: 10px;
+  border: none;
+  font-size: 19px;
+  padding: 8px 8px;
+  
+}
+.card-message{
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  font-size: 15px;
+  padding-left: 0px;
+  text-align:justify;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.message-writer{
+  text-align: end;
+  margin: 10px;
+  font-weight: bold;
+  position: absolute;
+}
+}

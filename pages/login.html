@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login form</title>
-    
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./../css/login.css">
 </head>
 <body>
-    <section>
-                <form class="form box-shadow box-shadow1 ">
-                <h1>Login to my account</h1>
-                <p>Enter your e-mail and password</p>
-                 
-                <input class="input" type="email" placeholder="Email"/><br/><br/>
-               
-                <input class="input" type="password" placeholder="password"/><br></br>
-                <button class=form-btn>Login</button>
-                <p>This site is protected by Captcha and the captcha privacy policy and Term of service apply</p>
-                </form>
-                <p>New customer? 
-                  <span>Create your account</span>
-                </p>
-                
-                <p>Last password
-                   <span>Recover password</span></p>
-            </section>
+    <div class="container">
+        <p class="icon">
+            <img src="C:\GD\icp10-javaScript-github-project-DoctorsAppointment\images\doctor.png" alt="Doctor Image">
+            <h3 class="color">Dr. Appointment</h3>
+          </p>
+        <h2>Login To Your Account</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="login-username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <p>Don't have an account? <a href="registration.html">Register here</a></p>
+    </div>
+   
 
-             </header>
-            
-            </body>
+    <script src="./../js/login.js"></script>
+</body>
 </html>
-        
-
-    
