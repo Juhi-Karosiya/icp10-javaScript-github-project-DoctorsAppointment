@@ -4,281 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital FAQ</title>
-    <style>
-        body {
-          
-            margin: 0%;
-           padding: 0%;
-           font-family: sans-serif;
-           background-color:rgb(239, 239, 243);
-
-        }
-        .container1{
-            max-width: 800px;
-            width: 50%;
-            margin-top: 30px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0,0.1);
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            height: auto;
-            overflow: scroll;
-            scrollbar-3dlight-color: #1da1f2;
-        }
-        h1 {
-            text-align: center;
-        }
-        .faq {
-            margin-bottom: 20px;
-        }
-        .faq h3 {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .style1{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style2{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style3{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-
-        .style4{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style5{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style6{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style7{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-
-        .main{
-            display: flex;
-            padding-left: 10px;
-            margin: 0%;
-            /* flex-wrap: wrap; */
-           
-            height: auto;
-           
-            
-            
-         width: 100%;
-           height: 600px;
-        }
-        .container2{
-            width: 50%;
-            display: flex;
-            
-            flex-wrap: wrap-reverse;
-            padding-top: 5%;
-            padding-left: 10%;
-            border-radius:80px ;
-           
-        }
-        .imgfaq{
-            border-radius: 20px;
-            width: 90%;
-            height: 560px;
-        
-        }
-        @media  (max-width:768px) {
-
-            .main{
-                display: block;
-                
-               
-            }
-            .container2{
-                flex-wrap: wrap-reverse;
-                justify-content: center;
-                align-items: center;
-                 margin:0px auto;
-            }
-            .container1{
-                margin:0px auto;
-                padding: 0%;
-            }
-        }
-
-.inputques{
-    margin: 60px 5% ;
-    height: 30px;
-    width: 60%;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0,0.1);
-    font-size: large;
-    padding: 10px;
-
     
-}
-.pink{
-    /* margin: 50px auto ; */
-    margin-left:  50% ;
-    margin-top: 65px;
-    
-    
-}
-.green{
-   
-    height: 150px;
-    width: 50%;
-}
-.red{
-    height: 150px;
-    width: 50%;
-
-}
-.moto{
-    display: flex;
-}
-.call{
-    width: 100%;
-    height: 40px;
-    display: block;
-}
-.submit{
-    margin-left:  45%;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0,0.1); 
-    height: 35px;
-    width: 140px;
-    background-color: #007bff;
-    color: white;
-    font-size: large;
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-.submit:hover{
-    background-color: #184b81;
-    cursor: pointer;
-}
-.headsubmit{
-    margin-left: 35%;
-}
-.black{
-    color:rgb(147, 234, 147);
-
-}
-.creater{
-    display: flex;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 30px;
-    background-color:rgb(239, 239, 243);
-
-}
-.text{
-    padding-left: 10px;
-    width: 50%;
-    margin: 50px 0%;
-}
-.headname{
-    margin-left:-680px;
-}
-
-.drop-shadow{
-height: 300px;
-width: 400px;
-margin: 80px 15%;
-filter: drop-shadow(12px 8px 4px rgb(133, 133, 226));
-}
-.imgconatainer{
-    width: 50%;
-    
-}
-
-
-
-.footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .footer .links {
-            margin: 10px 0;
-        }
-        .footer .links a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .footer .links a:hover {
-            text-decoration: underline;
-        }
-        .footer .social-icons {
-            margin: 10px 0;
-        }
-        .footer .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 20px;
-        }
-        .footer .social-icons a:hover {
-            color: #1da1f2;
-        }
-        .head20{
-            font-family: 'Arial Narrow', Arial, sans-serif;
-            font-weight: 500;
-            font-size:medium;
-        }
-    </style>
+    <link rel="stylesheet" href="./../css/faq.css">
 </head>
 <body>
+
+
+    <nav class="navbar-container">
+        <div class="main-section">
+          <a href="index.html">
+          <img src="./icons/logo.png" class="logo" />
+        </a>
+          <p class="title">MediCare Hub</p>
+      
+        </div>
+  
+        <div class="heading-container">
+          <a href="./pages/doctor.html" class="heading">Doctor's</a>
+          <a href="./pages/appoint.html" class="heading">Appointment</a>
+          <a href="./pages/ordermeds.html" class="heading">Order Medicine</a>
+          <a href="./pages/services.html" class="heading">Service</a>
+          <a href="./pages/about_us.html" class="heading">About Us</a>
+  
+          <a href="#" class="heading log-sign-heading">Log in / Sign in</a>
+          </div>
+        </div>
+      </nav>
+
+
+  
+    
     <div class="creater">
         <div class="imgconatainer"><img class="drop-shadow" src="./../images/faq_images/faqmain1.png"></div>
 
 
         <div class="text"><h1 class="headname">FAQs</h1><h4 class="head20">Have questions?<br> Here you'll find the answers most valued by our partners, along with access to step-by-step instructions and support .By providing easy access to information, FAQ pages reduce user frustration and make it easier for customers to find what they need.By demonstrating a willingness to provide clear and comprehensive information, businesses can build trust and credibility with their customers. FAQ pages can help improve search engine rankings by providing relevant content and keywords, potentially leading to more organic traffic. .. </h4></div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <div class="main">
 
@@ -336,7 +97,7 @@ filter: drop-shadow(12px 8px 4px rgb(133, 133, 226));
 </div>
 <div class="red" id="red">
    
-        <input type="text" class="inputques" id="inputque"/>
+        <input type="text" class="inputques" id="inputque" placeholder="ANY DOUBT"/>
    
 </div>
 </div>
@@ -346,21 +107,58 @@ filter: drop-shadow(12px 8px 4px rgb(133, 133, 226));
  <hr>
 
 
-
  <footer class="footer">
-    <p>&copy; 2025 Your Website. All Rights Reserved.</p>
-    <div class="links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+    <div  class="footer-container">
+      <img src="./icons/logo.png" class="footer-logo" />
+      <p class="footer-title">MediCare Hub</p>
     </div>
-    <div class="social-icons">
-        <a href="#">&#x1F426;</a> <!-- Twitter -->
-        <a href="#">&#x1F465;</a> <!-- Facebook -->
-        <a href="#">&#x1F4F1;</a> <!-- Instagram -->
+
+    <div class="link-container">
+        <h3  class="link-heading">Quick Links</h3>
+      
+      <div class="pages-container">
+        <ul type="none">
+          <li class="footer-list" ><a href="index.html" class="footer-list-link">Home</a></li>
+          <li class="footer-list"><a href="#" class="footer-list-link">Contact Us</a></li>
+          <li class="footer-list"><a href="./pages/services.html" class="footer-list-link">Services</a></li>
+          <li class="footer-list"><a href="./pages/ordermeds.html" class="footer-list-link">Order Medicine</a></li>
+          <li class="footer-list"><a href="./pages/about_us.html" class="footer-list-link">About Us</a></li>
+          <li class="footer-list"><a href="./pages/appoint.html" class="footer-list-link">Appointment</a></li>
+
+        </ul>
+
+          <ul type="none">
+          <li class="footer-list"><a href="./pages/doctor.html" class="footer-list-link">Doctor's</a></li>
+          <li class="footer-list"><a href="./pages/feedback.html" class="footer-list-link">Feedback</a></li>
+          <li class="footer-list"><a href="./pages/blog_news.html" class="footer-list-link">Blog & News</a></li>
+          <li class="footer-list"><a href="./pages/career.html" class="footer-list-link">Career</a></li>
+          <li class="footer-list"><a href="./pages/faq.html" class="footer-list-link">FAQ's</a></li>
+        
+        </ul>
+      </div>
     </div>
-</footer>
+
+
+    <div class="address">
+      <h3 class="address-heading">Get In Touch</h3>
+      <p class="address-description">D-4 MIDC, Chikalthana<br>
+      Chhatrapati Sambhajinagar, 431006, India<br>
+      <img src="./icons/mobile.png" class="contact-us-icon"/>   <a href="callto: 91-22-2653 4444" class="contact-us">91-22-2653 4444</a><br>
+      <img src="./icons/email.png" class="contact-us-icon"/>  <a href="mailto:contactus@medicareHub.com" class="contact-us">contactus@medicareHub.com</a><br>
+      Corporate Identity Number: L24230MH1999PLC120720
+      </p>
+
+      <img src="./images/home-7.png" class="bottom-img"/>
+      <img src="./images/home-8.png" class="bottom-img"/>
+      </div>
+      
+   
+  </footer>
+
+
+
+
+
     <script>
 
 
@@ -376,11 +174,12 @@ add.innerHTML=`<div></div1>`
     remove.innerHTML=`<h1></h1>`
 
     const meessed =document.getElementById("mess")
-    meessed.innerHTML=` <h1 class="headsubmit">YOUR DOUBT IS SUBMITTED...</h1> `
+    meessed.innerHTML=` <h1 class="headsubmit">YOUR DOUBT IS SUBMITTED...<br>
+<span style="font-size:medium">we will connect soon ..</span></h1> `
 
 const btn=document.getElementById("button")
-btn.innerHTML=`<span class="black">SUBMITTED✅</span>`
-
+btn.innerHTML=`<span class="black">SUBMITTED✅</span><br>
+`
 }
        
         function unchanged(){
@@ -396,15 +195,7 @@ function Change(){
     image.src = "./../images/faq_images/faq1.png"
 
 }
-
-
-
-
-        // function close(){
-        //     const heading=document.getElementById("head1");
-        //     heading.classList.add(`style1`)
-        // }
-    
+  
 
         function FAQ1(){
        const heading=document.getElementById("head1");

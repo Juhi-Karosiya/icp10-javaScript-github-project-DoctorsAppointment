@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Search</title>
+    <link rel="stylesheet" href="./../css/style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #b7c0db;
+            background-color: #E3F2FD;
             text-align: center;
             color: white;
             margin: 0;
@@ -16,6 +17,8 @@
 
         .search-container {
             margin-top: 30px;
+            color: #007BFF;
+            font-size: 21px;
         }
 
         .search-box {
@@ -35,7 +38,7 @@
 
         button {
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: #2a64a1;
             color: white;
             border: none;
             border-radius: 5px;
@@ -98,65 +101,126 @@
         .book-btn:hover {
             background-color: #218838;
         }
+
+        @media (max-width: 768px) {
+                .search-box {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            input {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .doctor-card {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                max-width: 400px;
+                padding: 20px;
+            }
+            
+            .doctor-card img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar-container">
+        <div class="main-section">
+          <a href="index.html">
+          <img src="./icons/logo.png" class="logo" />
+        </a>
+          <p class="title">MediCare Hub</p>
+      
+        </div>
+  
+        <div class="heading-container">
+          <a href="./pages/doctor.html" class="heading">Doctor's</a>
+          <a href="./pages/appoint.html" class="heading">Appointment</a>
+          <a href="./pages/ordermeds.html" class="heading">Order Medicine</a>
+          <a href="./pages/services.html" class="heading">Service</a>
+          <a href="./pages/about_us.html" class="heading">About Us</a>
+  
+          <a href="#" class="heading log-sign-heading">Log in / Sign in</a>
+          </div>
+        </div>
+      </nav>
     <div class="search-container">
-        <h2>Find and Book a Doctor</h2>
+        <h1>Find and Book a Doctor</h1>
         <div class="search-box">
-            <input type="text" id="searchCity" placeholder="🔍 Search by City">
-            <button onclick="searchByCity()">Search by City</button>
+            <input type="text" id="searchCity" placeholder="🔍 Search City">
+            <button onclick="searchByCity()">Search </button>
         </div>
         <div class="search-box">
             <input type="text" id="searchSpecialty" placeholder="🔍 Search Doctors,Clinics,Hospitals,etc.">
-            <button onclick="searchBySpecialty()">Search by Type</button>
+            <button onclick="searchBySpecialty()">Search</button>
         </div>
     </div>
+    
 
     <div id="doctor-list" class="doctor-list"></div>
 
     <script>
         const doctors = [
             {
+                
+                name: "Dr.Hetal Vyas",
+                specialty: "Homoeopath",
+                experience: "23 years Experience Overall",
+                location: "Sadashiv Peth, Pune",
+                fee: "₹500",
+                rating: "97%",
+                image: "https://th.bing.com/th/id/OIP.olJdVNaOPxhBvciprwK6AAAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"  
+            },
+            
+            {
                 name: "Dr. Amol Thorat Dinkar",
                 specialty: "Dentist",
-                experience: "25 years",
+                experience: "25 years Experience Overall",
                 location: "Kharadi, Pune",
                 fee: "₹300",
                 rating: "90%",
                 image: "https://www.dentistfriend.com/uploads/photo/dr-amol-thorat-dinkar-1476079146-57fb2e2a986fd.jpg"
             },
+
             {
                 name: "Krushna Orthodontic and Dental Clinic",
-                specialty: "Dentist",
-                experience: "1 - 12 years",
+                specialty: "Dentist Clinic",
+                experience: "1 - 12 years Experience Overall",
                 location: "Sinhagad Road",
                 fee: "₹300",
                 rating: "100%",
                 image: "https://images1-fabric.practo.com/practices/1238826/krushna-orthodontic-and-dental-clinic-pune-66e5666d94f06.jpeg"
             },
+
             {
                 name: "Dr. Sandeep Bhirud",
                 specialty: "Dentist",
-                experience: "15 years",
+                experience: "15 years Experience Overall",
                 location: "Wakad, Pune",
                 fee: "₹400",
                 rating: "85%",
                 image: "https://cdn-dhnnd.nitrocdn.com/gYiUPTZroQSqlBfBNWLqhsZGPIOLEURl/assets/static/optimized/rev-06ee38e/wp-content/uploads/2020/02/Dr.-Sandeep-Bhirud-1.jpg"
             },
+
             {
                 name: "Dr. Hina Kherajani",
                 specialty: "Dermatologist",
-                experience: "23 years",
+                experience: "23 years Experience Overall",
                 location: "Pimple Saudagar, Pune",
                 fee: "₹700",
                 rating: "95%",
                 image: "https://auradermatologistpune.com/wp-content/uploads/2024/04/1pp.jpeg"
             },
+
             {
                 name: "Dr. Vaseem Choudhary",
                 specialty: "Dentist",
-                experience: "25 years",
+                experience: "25 years Experience Overall",
                 location: "Sadashiv Peth, Pune",
                 fee: "₹500",
                 rating: "95%",
@@ -166,7 +230,7 @@
              {
                 name: "Dr. Sabrina Bokil",
                 specialty: "Obstetrician/Gynecologist",
-                experience: "34 years",
+                experience: "34 years Experience Overall",
                 location: "Baner, Pune",
                 fee: "₹700",
                 rating: "86%",
@@ -175,7 +239,7 @@
             {
                 name: "Dr. Rajesh Nalawade",
                 specialty: "Homeopath",
-                experience: "21 years",
+                experience: "21 years Experience Overall",
                 location: "Nigdi-Pradhkaran, Pune",
                 fee: "₹1000",
                 rating: "95%",
@@ -184,7 +248,7 @@
             {
                 name: "Dr. Hemant Chavan",
                 specialty: "Ayurveda",
-                experience: "15 years",
+                experience: "15 years Experience Overall",
                 location: "Pimple Saudagar, Pune",
                 fee: "₹200",
                 rating: "94%",
@@ -193,7 +257,7 @@
             {
                 name: "Dr. Shailaja Desai",
                 specialty: "General Physician",
-                experience: "16 years",
+                experience: "16 years Experience Overall",
                 location: "Sadashiv Peth, Pune",
                 fee: "₹700",
                 rating: "90%",
@@ -202,7 +266,7 @@
             {
                 name: "Dr. L K Desai",
                 specialty: "Dermatologist",
-                experience: "30 years",
+                experience: "30 years Experience Overall",
                 location: "Sopan Baug , Pune",
                 fee: "₹700",
                 rating: "94%",
@@ -211,7 +275,7 @@
             {
                 name: "Dr. Nandini Teli",
                 specialty: "General Physician",
-                experience: "16 years",
+                experience: "16 years Experience Overall",
                 location: "Wakad, Pune",
                 fee: "₹900",
                 rating: "91%",
@@ -220,7 +284,7 @@
             {
                 name: "Dr. Girija Ghate",
                 specialty: "Ear-Nose-Throat(ENT)Specialist",
-                experience: "26 years",
+                experience: "26 years Experience Overall",
                 location: "Baner, Pune",
                 fee: "₹1000",
                 rating: "100%",
@@ -229,7 +293,7 @@
             {
                 name: "Dr.Rupali Benade",
                 specialty: "Ayurveda",
-                experience: "20 years",
+                experience: "20 years Experience Overall",
                 location: "Baner, Pune",
                 fee: "₹500",
                 rating: "100%",
@@ -238,25 +302,17 @@
             {
                 name: "Dr.Sumitpal Bhatti",
                 specialty: "ENT/ Otorhinolaryngologist,Head and Neck Surgeon",
-                experience: "35 years",
+                experience: "35 years Experience Overall",
                 location: "Sadashiv Peth, Pune",
                 fee: "₹1500",
                 rating: "82%",
                 image: "https://th.bing.com/th/id/OIP.Hjp4rH_m9k-ujUU-qrHiNwHaHK?w=181&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"  
             },
-            {
-                name: "Dr.Hetal Vyas",
-                specialty: "Homoeopath",
-                experience: "23 years",
-                location: "Sadashiv Peth, Pune",
-                fee: "₹500",
-                rating: "97%",
-                image: "https://th.bing.com/th/id/OIP.olJdVNaOPxhBvciprwK6AAAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"  
-            },
+            
             {
                 name: "Dr.Vinod Midha",
                 specialty: "General Physician",
-                experience: "41 years",
+                experience: "41 years Experience Overall",
                 location: "Viman Nagar, Pune",
                 fee: "₹550",
                 rating: "96%",
@@ -325,5 +381,52 @@
        
         displayDoctors(doctors);
     </script>
+    <footer class="footer">
+        <div  class="footer-container">
+          <img src="./icons/logo.png" class="footer-logo" />
+          <p class="footer-title">MediCare Hub</p>
+        </div>
+
+        <div class="link-container">
+            <h3  class="link-heading">Quick Links</h3>
+          
+          <div class="pages-container">
+            <ul type="none">
+              <li class="footer-list" ><a href="index.html" class="footer-list-link">Home</a></li>
+              <li class="footer-list"><a href="#" class="footer-list-link">Contact Us</a></li>
+              <li class="footer-list"><a href="./pages/services.html" class="footer-list-link">Services</a></li>
+              <li class="footer-list"><a href="./pages/ordermeds.html" class="footer-list-link">Order Medicine</a></li>
+              <li class="footer-list"><a href="./pages/about_us.html" class="footer-list-link">About Us</a></li>
+              <li class="footer-list"><a href="./pages/appoint.html" class="footer-list-link">Appointment</a></li>
+
+            </ul>
+  
+              <ul type="none">
+              <li class="footer-list"><a href="./pages/doctor.html" class="footer-list-link">Doctor's</a></li>
+              <li class="footer-list"><a href="./pages/feedback.html" class="footer-list-link">Feedback</a></li>
+              <li class="footer-list"><a href="./pages/blog_news.html" class="footer-list-link">Blog & News</a></li>
+              <li class="footer-list"><a href="./pages/career.html" class="footer-list-link">Career</a></li>
+              <li class="footer-list"><a href="./pages/faq.html" class="footer-list-link">FAQ's</a></li>
+            
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="address">
+          <h3 class="address-heading">Get In Touch</h3>
+          <p class="address-description">D-4 MIDC, Chikalthana<br>
+          Chhatrapati Sambhajinagar, 431006, India<br>
+          <img src="./icons/mobile.png" class="contact-us-icon"/>   <a href="callto: 91-22-2653 4444" class="contact-us">91-22-2653 4444</a><br>
+          <img src="./icons/email.png" class="contact-us-icon"/>  <a href="mailto:contactus@medicareHub.com" class="contact-us">contactus@medicareHub.com</a><br>
+          Corporate Identity Number: L24230MH1999PLC120720
+          </p>
+
+          <img src="./images/home-7.png" class="bottom-img"/>
+          <img src="./images/home-8.png" class="bottom-img"/>
+          </div>
+          
+       
+      </footer>
 </body>
 </html>

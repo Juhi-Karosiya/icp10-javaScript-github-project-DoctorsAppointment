@@ -12,18 +12,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #6b88de;
+            background-color: #e9ebef;
         }
 
+
+        /* Navbar */
         .navbar {
-            background-color: #f8d7da;
-            padding: 15px;
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-
 
         .nav-links {
             list-style: none;
@@ -47,7 +48,17 @@
         .nav-links a:hover {
             color: #c0392b;
         }
-
+         /* Responsive Navbar */
+         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
 
         .about-button {
             background-color: #f1948a;
@@ -64,12 +75,17 @@
         }
 
         header {
-            background-color: #6b88de;
+            background-color: #dcdee4;
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+         /* Responsive Blog Layout */
+         @media (max-width: 768px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
         .blog-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -129,30 +145,32 @@
         }
 
         footer {
+            background: #585151;
+            color: white;
             text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1> Blog & News</h1>
-    </header>
-
     <nav class="navbar">
-        <div class="logo">Doctor Appointment</div>
+        <div class="logo">Blogs & News</div>
         <ul class="nav-links">
             <li><a href="/index.html">Home</a></li>
             <li><a href="doctor.html">Doctor</a></li>
             <li><a href="appoint.html">Appointment</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="login.html">Log in / Sign in</a></li>
+            <li> <a href="/pages/ordermeds.html">Order Medicine</a></li>
+
         </ul>
         <a href="about_us.html" class="about-button">About Us</a>
     </nav>
-
+    <header>
+        <h1> Blog & News</h1>
+    </header>
     <main>
         <section class="blog-container">
             <article class="blog-card">
@@ -202,39 +220,87 @@
                 <div class="blog-content">
                     <span class="tag">Blog</span>
                     <h2>AI in Healthcare: Revolutionizing Patient Care</h2>
-                    <p>Artificial intelligence is enhancing diagnostics, treatment plans, and patient management, leading to more accurate and efficient healthcare services.</p>
-                    <p class="hidden-content">This article delves into AI-powered medical imaging, predictive analytics, and robotic-assisted surgeries that are transforming modern healthcare.</p>
+                    <p>Artificial intelligence is enhancing diagnostics, treatment plans, and patient management,
+                        leading to more accurate and efficient healthcare services.</p>
+                    <p class="hidden-content">This article delves into AI-powered medical imaging, predictive analytics,
+                        and robotic-assisted surgeries that are transforming modern healthcare.</p>
                     <a class="read-more">Read More →</a>
                 </div>
             </article>
-            
+
             <article class="blog-card">
                 <img src="/images/Blog_news/Blog_news5.jpg" alt="Blog Image">
                 <div class="blog-content">
                     <span class="tag">Blog</span>
                     <h2>Mental Health Awareness: Breaking the Stigma</h2>
-                    <p>Mental health is just as important as physical health, yet stigma and lack of awareness prevent many from seeking help.</p>
-                    <p class="hidden-content">Discover how awareness campaigns, therapy options, and digital mental health tools are making mental healthcare more accessible and accepted.</p>
+                    <p>Mental health is just as important as physical health, yet stigma and lack of awareness prevent
+                        many from seeking help.</p>
+                    <p class="hidden-content">Discover how awareness campaigns, therapy options, and digital mental
+                        health tools are making mental healthcare more accessible and accepted.</p>
                     <a class="read-more">Read More →</a>
                 </div>
             </article>
-            
+
             <article class="blog-card">
                 <img src="/images/Blog_news/Blog_news6.jpg" alt="Blog Image">
                 <div class="blog-content">
                     <span class="tag">Blog</span>
                     <h2>What is Asthma: Causes, Symptoms, and Management</h2>
-                    <p>Asthma is a chronic respiratory condition that affects millions worldwide, causing breathing difficulties due to inflamed airways.</p>
-                    <p class="hidden-content">This article explores the common triggers, symptoms, and effective management strategies, including medications, lifestyle changes, and preventive care.</p>
+                    <p>Asthma is a chronic respiratory condition that affects millions worldwide, causing breathing
+                        difficulties due to inflamed airways.</p>
+                    <p class="hidden-content">This article explores the common triggers, symptoms, and effective
+                        management strategies, including medications, lifestyle changes, and preventive care.</p>
                     <a class="read-more">Read More →</a>
                 </div>
             </article>
-            
+
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Doctor Appointment. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="icons/logo.png" class="footer-logo" />
+            <p class="footer-title">MediCare Hub</p>
+        </div>
+    
+        <div class="link-container">
+            <h3 class="link-heading">Quick Links</h3>
+    
+            <div class="pages-container">
+                <ul type="none">
+                    <li class="footer-list"><a href="/index.html" class="footer-list-link">Home</a></li>
+                    <li class="footer-list"><a href="services.html" class="footer-list-link">Services</a></li>
+                    <li class="footer-list"><a href="ordermeds.html" class="footer-list-link">Order Medicine</a></li>
+                    <li class="footer-list"><a href="about_us.html" class="footer-list-link">About Us</a></li>
+                    <li class="footer-list"><a href="appoint.html" class="footer-list-link">Appointment</a></li>
+                </ul>
+    
+                <ul type="none">
+                    <li class="footer-list"><a href="doctor.html" class="footer-list-link">Doctor's</a></li>
+                    <li class="footer-list"><a href="feedback.html" class="footer-list-link">Feedback</a></li>
+                    <li class="footer-list"><a href="blog_news.html" class="footer-list-link">Blog & News</a></li>
+                    <li class="footer-list"><a href="career.html" class="footer-list-link">Career</a></li>
+                    <li class="footer-list"><a href="faq.html" class="footer-list-link">FAQ's</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="address">
+            <h3 class="address-heading">Get In Touch</h3>
+            <p class="address-description">
+                D-4 MIDC, Chikalthana<br>
+                Chhatrapati Sambhajinagar, 431006, India<br>
+                <img src="icons/mobile.png" class="contact-us-icon" />
+                <a href="tel:91-22-2653-4444" class="contact-us">91-22-2653-4444</a><br>
+                <img src="icons/email.png" class="contact-us-icon" />
+                <a href="mailto:contactus@medicareHub.com" class="contact-us">contactus@medicareHub.com</a><br>
+                Corporate Identity Number: L24230MH1999PLC120720
+            </p>
+    
+            <img src="images/home-7.png" class="bottom-img" />
+            <img src="images/home-8.png" class="bottom-img" />
+        </div>
     </footer>
+    
     <script>
         document.querySelectorAll('.read-more').forEach(button => {
             button.addEventListener('click', function () {
