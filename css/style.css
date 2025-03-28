@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .navbar-container {
   background-color: #fa6464;
@@ -119,10 +120,19 @@ body {
 .video-map-container {
   padding: 20px 50px;
   margin-bottom: 200px;
+ 
 }
 .video-heading {
   text-align: center;
   font-size: 40px;
+  color: green;
+  background-color: rgb(142, 201, 142);
+  width: 100%;
+  padding: 10px 0px;
+}
+.youtube-video{
+  margin: 20px 280px;
+  border: 1px solid black;
 }
 .home-video {
   height: 500px;
@@ -132,7 +142,7 @@ body {
 .voice-container{
   display: flex;
   justify-content: space-evenly;
-  
+ 
 }
 .voice-sub-container{
   height: 500px;
@@ -215,7 +225,28 @@ body {
 .sub-card-heading{
   font-size: 20px;
 }
-
+.explore-btn-container{
+  background-color: #ffcccc;
+ 
+}
+.explore-heading{
+  text-align: center;
+  color: green;
+  background-color: rgb(142, 201, 142);
+  font-size: 40px;
+  padding: 10px;
+}
+.explore-btn{
+  font-size: 20px;
+  padding: 10px;
+  width: 180px;
+  border: none;
+  margin: 50px 150px;
+  border-radius: 20px;
+  box-shadow: 0 0 2px 3px #e60000;
+  background-color: #ce2f2f;
+  color: white;
+}
 .map {
   margin-left: 370px;
   width: 800px;
@@ -303,4 +334,53 @@ body {
 .bottom-img {
   margin: auto 40px;
   cursor: pointer;
+}
+
+
+@media(max-width:700px){
+.card-container{
+  width: 100%;
+}
+.card-background-img{
+  height: 400px;
+}
+.card-heading {
+ position:absolute;
+  right: 0px;
+  left: 10px;
+  top: 0px;
+  font-size: 23px;
+  color: #ed1c24;
+  font-family: "Khula", Sans-serif;
+  font-weight: 700;
+}
+.card-description {
+font-size: 10px;
+right:10px;
+top: 50px;
+}
+.card-btn {
+  position: absolute;
+  top:200px;
+  right: 10px;
+  border: none;
+  font-size: 19px;
+  padding: 8px 8px;
+  
+}
+.card-message{
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  font-size: 15px;
+  padding-left: 0px;
+  text-align:justify;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.message-writer{
+  text-align: end;
+  margin: 10px;
+  font-weight: bold;
+  position: absolute;
+}
 }

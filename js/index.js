@@ -151,7 +151,9 @@ function ImageChange(num) {
       document.getElementById("filledCircle10").src ="./images/red.png";
 
   }
+  
 }
+
 
 
 
