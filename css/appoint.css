@@ -91,6 +91,7 @@
         height: 400px;
         margin-left: 100px;
         border-radius: 20px;
+        border: 2px solid black;
         
 
     }
@@ -105,9 +106,10 @@
         border-radius: solid black 1px;
     }
     .button{
-        height: 26px;
-        width: 140px;
-        background-color: rgb(202, 134, 134);
+        height: 30px;
+        width: 150px;
+        font-size: 15px;
+        background-color: rgb(211, 159, 159);
         border: 1px solid black;
         border-radius: 10px;
 
@@ -118,6 +120,7 @@
         flex-wrap: wrap; 
         gap: 20px;  
         justify-content: center; 
+        
 
     }
     
@@ -139,3 +142,14 @@
         background-color: red;
         color: white;
     }
+
+    .headline{
+        height: 150px;
+        text-align: center;
+        font-size: 60px;
+        padding-top: 30px;
+        
+
+        background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid rgb(18, 16, 16) ;  
+     }
