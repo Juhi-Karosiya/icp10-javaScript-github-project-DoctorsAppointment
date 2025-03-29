@@ -466,6 +466,7 @@ ul {
 .lead{
     height: 40px;
     margin: 0%;
+    margin-bottom: 30px;
     padding-top: 15px;
     text-align: center;
     background-color: #d5dee7;

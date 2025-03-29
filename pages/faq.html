@@ -103,7 +103,7 @@
 <hr>
 <div  class="moto" id="mess">
 <div class="green" >
-    <h1 id="green" class="pink">ASK YOUR DOUBT ?</h1>
+    <h1 id="green"  class="pink">ASK YOUR DOUBT ?</h1>
 </div>
 <div class="red" id="red">
    
@@ -111,7 +111,7 @@
    
 </div>
 </div>
-<div class="block" class="call" ><button  class="submit" onclick="submit()" id="button">SUBMIT</button></div>
+<div class="block" class="call" ><button  class="submit"  onclick="submit()" id="button">SUBMIT</button></div>
 
 
  <hr class="line1">
@@ -179,10 +179,12 @@
 
     <script>
 
-
+function alerted(){
+  alert("YOUR DOUBT IS SUBMITTED")
+} 
 function submit(){
     const inner=document.getElementById("inputque")
-    if(inner.innerHTML=``){
+    if(inner.innerText=``){
         alert("enter your doubt");
     }
 const add =document.getElementById("red")
