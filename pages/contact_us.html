@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MediCare Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        body {
+            font-family: "Lexend", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9;
+            color: #333;
+        }
+
+        .navbar-container, .footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .main-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .heading-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .heading {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .heading:hover {
+            color: #ffcc00;
+        }
+
+        .contact-us {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .contact-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2e7d32;
+        }
+
+        .contact-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .contact-details a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        .link-heading {
+            font-size: 16px;
+        }
+
+        .pages-container {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pages-container li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="main-section">
+            <a href="index.html">
+                <img src="./../icons/logo.png" class="logo" />
+            </a>
+            <p class="title">MediCare Hub</p>
+        </div>
+        <div class="heading-container">
+            <a href="./pages/doctor.html" class="heading">Doctor's</a>
+            <a href="./pages/appoint.html" class="heading">Appointment</a>
+            <a href="./pages/ordermeds.html" class="heading">Order Medicine</a>
+            <a href="./pages/services.html" class="heading">Service</a>
+            <a href="./pages/about_us.html" class="heading">About Us</a>
+            <a href="#" class="heading log-sign-heading">Log in / Sign in</a>
+        </div>
+    </nav>
+    
+    <section class="contact-us">
+        <h1 class="contact-title">Contact Us</h1>
+        <p class="contact-text">We are here to assist you. Reach out to us through the following ways:</p>
+        
+        <div class="contact-details">
+            <p><strong>Address:</strong> 123 Health Street, City, Country</p>
+            <p><strong>Email:</strong> <a href="mailto:support@medicarehub.com">support@medicarehub.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">+1234567890</a></p>
+        </div>
+    </section>
+    <footer class="footer">
+            <h3 class="link-heading">Quick Links</h3>
+            <ul type="none" class="pages-container">
+                <li><a href="./../index.html">Home</a></li>
+                <li><a href="./../pages/doctor.html">Doctor's</a></li>
+                <li><a href="./../pages/appoint.html">Appointment</a></li>
+                <li><a href="./../pages/ordermeds.html">Order Medicine</a></li>
+                <li><a href="./../pages/services.html">Service</a></li>
+                <li><a href="./../pages/about_us.html">About Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
