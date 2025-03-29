@@ -1,0 +1,91 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ebef;
+        }
+        .about-button {
+            background-color: #f1948a;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .about-button:hover {
+            background-color: #e74c3c;
+        }
+
+        header {
+            background-color: #dcdee4;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+         /* Responsive Blog Layout */
+         @media (max-width: 768px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: orange;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: orange;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>

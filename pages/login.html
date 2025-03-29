@@ -13,23 +13,38 @@
             <h3 class="color">Dr. Appointment</h3>
           </p>
         <h2>Login To Your Account</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="login-username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="login-password" required>
-            </div>
-            <div class="input-group">
-                <button type="submit">Login</button>
-            </div>
-        </form>
-        <p>Don't have an account? <a href="registration.html">Register here</a></p>
-    </div>
-   
+        <form id="loginForm">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" required><br><br>
 
-    <script src="./../js/login.js"></script>
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required><br><br>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="registration.html">Registration here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const loginUsername = document.getElementById('loginUsername').value;
+            const loginPassword = document.getElementById('loginPassword').value;
+
+            // Retrieve user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem(loginUsername));
+
+            // Check if the username exists and if the password matches
+            if (storedUser && storedUser.password === loginPassword) {
+                alert('Login successful!');
+                // Redirect to home page or dashboard
+                window.location.href = "./../index.html";
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
 </body>
 </html>
