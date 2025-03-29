@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login form</title>
-    
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./../css/login.css">
 </head>
 <body>
-    <section>
-                <form class="form box-shadow box-shadow1 ">
-                <h1>Login to my account</h1>
-                <p>Enter your e-mail and password</p>
-                 
-                <input class="input" type="email" placeholder="Email"/><br/><br/>
-               
-                <input class="input" type="password" placeholder="password"/><br></br>
-                <button class=form-btn>Login</button>
-                <p>This site is protected by Captcha and the captcha privacy policy and Term of service apply</p>
-                </form>
-                <p>New customer? 
-                  <span>Create your account</span>
-                </p>
-                
-                <p>Last password
-                   <span>Recover password</span></p>
-            </section>
+    <div class="container">
+        <p class="icon">
+            <img src="C:\GD\icp10-javaScript-github-project-DoctorsAppointment\images\doctor.png" alt="Doctor Image">
+            <h3 class="color">Dr. Appointment</h3>
+          </p>
+        <h2>Login To Your Account</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" required><br><br>
 
-             </header>
-            
-            </body>
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required><br><br>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="registration.html">Registration here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const loginUsername = document.getElementById('loginUsername').value;
+            const loginPassword = document.getElementById('loginPassword').value;
+
+            // Retrieve user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem(loginUsername));
+
+            // Check if the username exists and if the password matches
+            if (storedUser && storedUser.password === loginPassword) {
+                alert('Login successful!');
+                // Redirect to home page or dashboard
+                window.location.href = "./../index.html";
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
+</body>
 </html>
-        
-
-    

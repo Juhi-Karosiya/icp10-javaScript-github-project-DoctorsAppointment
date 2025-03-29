@@ -4,132 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital FAQ</title>
-    <style>
-        body {
-          
-            margin: 0%;
-           padding: 0%;
-        }
-        .container1{
-            max-width: 800px;
-            width: 50%;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0,0.1);
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .faq {
-            margin-bottom: 20px;
-        }
-        .faq h3 {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .style1{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style2{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style3{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-
-        .style4{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style5{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style6{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-        .style7{
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-        }
-
-        .main{
-            display: flex;
-            padding: 20px;
-           
-            
-            
-         width: 100%;
-           height: 600px;
-        }
-        .container2{
-            width: 50%;
-            display: flex;
-            flex-wrap: wrap-reverse;
-            padding-top: 5%;
-            padding-left: 10%;
-           
-        }
-        .imgfaq{
-            border-radius: 50px;
-            width: 90%;
-            
-        
-        }
-        @media  (max-width:768px) {
-
-            .main{
-                display: block;
-                
-               
-            }
-            .container2{
-                flex-wrap: wrap-reverse;
-justify-content: center;
-align-items: center;
-margin:0px auto;
-            }
-            .container1{
-                margin:0px auto;
-                padding: 0%;
-            }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="./../css/faq.css">
+    
+    <link rel="stylesheet" href="./../css/style.css">
 </head>
 <body>
-    <div class="main">
+
+
+    <nav class="navbar-container">
+        <div class="main-section">
+          <a href="index.html">
+          <img src="./../icons/logo.png" class="logo" />
+        </a>
+          <p class="title">MediCare Hub</p>
+      
+        </div>
+  
+        <div class="heading-container">
+          <a href="./../pages/doctor.html" class="heading">Doctor's</a>
+          <a href="./../pages/appoint.html" class="heading">Appointment</a>
+          <a href="./../pages/ordermeds.html" class="heading">Order Medicine</a>
+          <a href="./../pages/services.html" class="heading">Service</a>
+          <a href="./../pages/about_us.html" class="heading">About Us</a>
+  
+          <a href="#" class="heading log-sign-heading">Log in / Sign in</a>
+          </div>
+        </div>
+      </nav>
+
+
+  
+    
+    <div class="creater">
+        <div  class="imgconatainer"><img  class="drop-shadow" src="./../images/faq_images/faqmain1.png"></div>
+
+
+        <div class="text"><h1 class="headname">FAQs</h1><h4 class="head20">Have questions?<br> Here you'll find the answers most valued by our partners, along with access to step-by-step instructions and support .By providing easy access to information, FAQ pages reduce user frustration and make it easier for customers to find what they need.By demonstrating a willingness to provide clear and comprehensive information, businesses can build trust and credibility with their customers. FAQ pages can help improve search engine rankings by providing relevant content and keywords, potentially leading to more organic traffic.An FAQ page (short for Frequently Asked Question page) is a part of your website that provides answers to common questions, assuages concerns, and overcomes objections. It's a space where customers can delve into the finer details of your product or service, away from your sales-focused landing pages and homepage... </h4></div>
+    </div>
+
+    <div  class="lead">COMMON ASKED QUESTION'S</div>
+
+    <div  class="main">
 
    
     <div class="container1">
         <h1>Frequently Asked Questions</h1>
         
         <div class="faq">
-            <h3 onclick="FAQ1()" ondblclick="close(name)" >What are the hospital's visiting hours?</h3>
+            <h3 onclick="FAQ1()" ondblclick="close()" >What are the hospital's visiting hours?</h3>
             <p id="head1" class="style1"> => Visiting hours are from 10:00 AM to 8:00 PM daily.</p>
         </div>
         
@@ -163,37 +86,134 @@ margin:0px auto;
         </div>
      
 </div>
-<div class="container2">
-    <img id="img" src="./../images/faq.png" class="imgfaq" onmouseenter="Change()" onmouseout="unchanged()"> 
+<div  class="container2">
+    <img id="img" class="block" src="./../images/faq_images/faq.png" class="imgfaq" onmouseenter="Change()" onmouseout="unchanged()"> 
 
+</div>
 </div>
 
 
+<hr  class="line1">
+
+
+<div  class="lead1">TELL YOUR DOUBT</div>
+
+
+
+<hr>
+<div  class="moto" id="mess">
+<div class="green" >
+    <h1 id="green" class="pink">ASK YOUR DOUBT ?</h1>
 </div>
+<div class="red" id="red">
+   
+        <input type="text" class="inputques" id="inputque" placeholder="ANY DOUBT"/>
+   
+</div>
+</div>
+<div class="block" class="call" ><button  class="submit" onclick="submit()" id="button">SUBMIT</button></div>
+
+
+ <hr class="line1">
+
+
+ <div class="lead1">OUR ADDRESS</div>
+ <hr>
+ <div class="block">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.5668941669246!2d73.97129117458525!3d15.291397059792283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb10196353897%3A0x3efcf0fca74572c2!2sMedicare%20Hub%20Chemist%20%26%20Druggist!5e0!3m2!1sen!2sin!4v1742804073629!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+  </div>
+
+
+
+ <footer  class="footer">
+    <div  class="footer-container">
+      <img src="./../icons/logo.png" class="footer-logo" />
+      <p class="footer-title">MediCare Hub</p>
+    </div>
+
+    <div class="link-container">
+        <h3  class="link-heading">Quick Links</h3>
+      
+      <div class="pages-container">
+        <ul type="none">
+          <li class="footer-list" ><a href="index.html" class="footer-list-link">Home</a></li>
+          <li class="footer-list"><a href="#" class="footer-list-link">Contact Us</a></li>
+          <li class="footer-list"><a href="./../pages/services.html" class="footer-list-link">Services</a></li>
+          <li class="footer-list"><a href="./../pages/ordermeds.html" class="footer-list-link">Order Medicine</a></li>
+          <li class="footer-list"><a href="./../pages/about_us.html" class="footer-list-link">About Us</a></li>
+          <li class="footer-list"><a href="./../pages/appoint.html" class="footer-list-link">Appointment</a></li>
+
+        </ul>
+
+        <!-- <ul type="none">
+          <li class="footer-list"><a href="./pages/doctor.html" class="footer-list-link">Doctor's</a></li>
+          <li class="footer-list"><a href="./pages/feedback.html" class="footer-list-link">Feedback</a></li>
+          <li class="footer-list"><a href="./pages/blog_news.html" class="footer-list-link">Blog & News</a></li>
+          <li class="footer-list"><a href="./pages/career.html" class="footer-list-link">Career</a></li>
+          <li class="footer-list"><a href="./pages/faq.html" class="footer-list-link">FAQ's</a></li>
+        
+        </ul> -->
+      </div>
+    </div>
+
+
+    <div class="address">
+      <h3 class="address-heading">Get In Touch</h3>
+      <p class="address-description">D-4 MIDC, Chikalthana<br>
+      Chhatrapati Sambhajinagar, 431006, India<br>
+      <img src="./../icons/mobile.png" class="contact-us-icon"/>   <a href="callto: 91-22-2653 4444" class="contact-us">91-22-2653 4444</a><br>
+      <img src="./../icons/email.png" class="contact-us-icon"/>  <a href="mailto:contactus@medicareHub.com" class="contact-us">contactus@medicareHub.com</a><br>
+      Corporate Identity Number: L24230MH1999PLC120720
+      </p>
+
+      <img src="./../images/home-7.png" class="bottom-img"/>
+      <img src="./../images/home-8.png" class="bottom-img"/>
+      </div>
+      
+   
+  </footer>
+
+
+
+
+
     <script>
+
+
+function submit(){
+    const inner=document.getElementById("inputque")
+    if(inner.innerHTML=``){
+        alert("enter your doubt");
+    }
+const add =document.getElementById("red")
+add.innerHTML=`<div></div1>`
+
+    const remove=document.getElementById("green");
+    remove.innerHTML=`<h1></h1>`
+
+    const meessed =document.getElementById("mess")
+    meessed.innerHTML=` <h1 class="headsubmit">YOUR DOUBT IS SUBMITTED...<br>
+<span style="font-size:medium">we will connect soon ..</span></h1> `
+
+const btn=document.getElementById("button")
+btn.innerHTML=`<span class="black">SUBMITTED✅</span><br>
+`
+}
        
         function unchanged(){
            
              const image=document.getElementById("img");
-    image.src = "./../images/faq.png"
+    image.src = "./../images/faq_images/faq.png"
 
         }
         setTimeout(unchanged,2000)
         
 function Change(){
     const image=document.getElementById("img");
-    image.src = "./../images/faq1.png"
+    image.src = "./../images/faq_images/faq1.png"
 
 }
-
-
-
-
-        // function close(){
-        //     const heading=document.getElementById("head1");
-        //     heading.classList.add(`style1`)
-        // }
-    
+  
 
         function FAQ1(){
        const heading=document.getElementById("head1");
