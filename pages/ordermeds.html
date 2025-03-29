@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Medicine Order</title>
     <style>
        
@@ -10,11 +11,12 @@
             font-family: Arial, sans-serif;
             padding: 20px;
             text-align: center;
+            background-color: rgb(240, 247, 254);
             
         }
         .medicine-card {
-         border: 1px solid #ddd;
-          padding: 12px; 
+         border: 1.3px solid #c6c6c6;
+          padding: 18px; 
           margin: 14px;
            display: inline-block;
             position: relative; 
@@ -34,12 +36,12 @@
             margin-bottom: 20px;
         
         }
-        .logo {
+        /* .logo {
             position: absolute;
             top: 10px;
             left: 10px;
             width: 150px;
-        }
+        } */
         
         #search-box {
             padding: 10px;
@@ -101,9 +103,26 @@
     </style>
 </head>
 <body>
+    <nav class="navbar-container">
+        <div class="main-section">
+          <a href="index.html">
+          <img src="/icons/logo.png" class="logo" />
+          </a>
+          <div class="heading-container">
+            <a href="./doctor.html" class="heading">Doctor's</a>
+            <a href="./appoint.html" class="heading">Appointment</a>
+            <a href="./ordermeds.html" class="heading">Order Medicine</a>
+            <a href="./services.html" class="heading">Service</a>
+            <a href="./about_us.html" class="heading">About Us</a>
+    
+            <a href="./registration.html" class="heading log-sign-heading"> Log in/Sign in</a>
+            </div>
+            </div>
+            </nav>
+      
     <h1>Order Medicine Online</h1>
     <div id="search-container">
-        <img src="/images/meclinic-logo.jpg" alt="Med+ Clinic" class="logo">
+        <!-- <img src="/images/meclinic-logo.jpg" alt="Med+ Clinic" class="logo"> -->
         <input type="text" id="search-box" placeholder="Search medicine..." onkeyup="searchMedicine()">
         <button id="clear-search" onclick="clearSearch()">Clear</button>
             
@@ -114,6 +133,10 @@
     <div id="medicine-list">
         
     <div id="thank-you-message">THANK YOU FOR VISITING.</div>
+    
+   
+            
+
     
     <script>
         const medicines = ["Paracetamol", "Ibuprofen", "Amoxicillin", "Cetirizine", "Aspirin",
@@ -222,6 +245,50 @@
         renderMedicines();
     </script>
 </body>
+<footer class="footer">
+    <div  class="footer-container">
+      <img src="/icons/logo.png" class="footer-logo" />
+      <p class="footer-title">MediCare Hub</p>
+    </div>
+
+    <div class="link-container">
+        <h3  class="link-heading">Quick Links</h3>
+      
+      <div class="pages-container">
+        <ul type="none">
+          <li class="footer-list" ><a href="index.html" class="footer-list-link">Home</a></li>
+          <li class="footer-list"><a href="#" class="footer-list-link">Contact Us</a></li>
+          <li class="footer-list"><a href="./pages/services.html" class="footer-list-link">Services</a></li>
+          <li class="footer-list"><a href="./pages/ordermeds.html" class="footer-list-link">Order Medicine</a></li>
+          <li class="footer-list"><a href="./pages/about_us.html" class="footer-list-link">About Us</a></li>
+          <li class="footer-list"><a href="./pages/appoint.html" class="footer-list-link">Appointment</a></li>
+
+        </ul>
+
+          <ul type="none">
+          <li class="footer-list"><a href="./doctor.html" class="footer-list-link">Doctor's</a></li>
+          <li class="footer-list"><a href="./feedback.html" class="footer-list-link">Feedback</a></li>
+          <li class="footer-list"><a href="./blog_news.html" class="footer-list-link">Blog & News</a></li>
+          <li class="footer-list"><a href="./career.html" class="footer-list-link">Career</a></li>
+          <li class="footer-list"><a href="./faq.html" class="footer-list-link">FAQ's</a></li>
+        
+        </ul>
+      </div>
+      </div>
+      <div class="address">
+        <h3 class="address-heading">Get In Touch</h3>
+        <p class="address-description">D-4 MIDC, Chikalthana<br>
+        Chhatrapati Sambhajinagar, 431006, India<br>
+        <img src="/icons/mobile.png" class="contact-us-icon"/>   <a href="callto: 91-22-2653 4444" class="contact-us">91-22-2653 4444</a><br>
+        <img src="/icons/email.png" class="contact-us-icon"/>  <a href="mailto:contactus@medicareHub.com" class="contact-us">contactus@medicareHub.com</a><br>
+        Corporate Identity Number: L24230MH1999PLC120720
+        </p>
+
+        <img src="/images/home-7.png" class="bottom-img"/>
+        <img src="/images/home-8.png" class="bottom-img"/>
+        </div>
+        
+</footer>
 </html> 
 
         
